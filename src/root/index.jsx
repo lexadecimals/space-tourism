@@ -2,6 +2,7 @@ import { Outlet, NavLink, useLocation } from 'react-router-dom';
 import data from '../data.json';
 
 import Layout from '../components/layout/index.jsx';
+import styles from './style.module.css';
 
 export const Root = () => {
   const crewMember = encodeURI(data.crew[0].name);
@@ -10,7 +11,7 @@ export const Root = () => {
 
   return (
     <Layout>
-      <nav>
+      <nav className={styles.nav}>
         <ul>
           <li>
             <NavLink to="/">Home</NavLink>

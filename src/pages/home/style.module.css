@@ -1,0 +1,25 @@
+.h1 span {
+  text-transform: uppercase;
+}
+
+.explore {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100%;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    grid-template-columns: 60% 40%;
+  }
+}
