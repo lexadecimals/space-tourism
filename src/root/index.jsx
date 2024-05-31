@@ -1,5 +1,7 @@
-import { Outlet, NavLink } from 'react-router-dom';
+import { Outlet, NavLink, useLocation } from 'react-router-dom';
 import data from '../data.json';
+
+import Layout from '../components/layout/index.jsx';
 
 export const Root = () => {
   const crewMember = encodeURI(data.crew[0].name);
@@ -7,7 +9,7 @@ export const Root = () => {
   const tech = encodeURI(data.technology[0].name);
 
   return (
-    <>
+    <Layout>
       <nav>
         <ul>
           <li>
@@ -25,6 +27,6 @@ export const Root = () => {
         </ul>
       </nav>
       <Outlet />
-    </>
+    </Layout>
   );
 };
