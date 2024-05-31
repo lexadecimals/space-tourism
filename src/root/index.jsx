@@ -4,6 +4,8 @@ import data from '../data.json';
 export const Root = () => {
   const crewMember = encodeURI(data.crew[0].name);
   const destination = data.destinations[0].name.toLowerCase();
+  const tech = encodeURI(data.technology[0].name);
+
   return (
     <>
       <nav>
@@ -18,7 +20,7 @@ export const Root = () => {
             <NavLink to={`/crew/${crewMember}`}>Crew</NavLink>
           </li>
           <li>
-            <NavLink to="/technology">Technology</NavLink>
+            <NavLink to={`/technology/${tech}`}>Technology</NavLink>
           </li>
         </ul>
       </nav>

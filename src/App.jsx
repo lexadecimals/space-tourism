@@ -9,8 +9,7 @@ import {
 import Homepage from './pages/home/index.jsx';
 import Destination from './pages/destination/index.jsx';
 import Crew from './pages/crew/index.jsx';
-import Technology from './pages/technology/index.jsx';
-import Location from './components/location/index.jsx';
+import Technologies from './pages/technologies/index.jsx';
 import { Root } from './root/index.jsx';
 
 const router = createBrowserRouter(
@@ -21,7 +20,8 @@ const router = createBrowserRouter(
       <Route path="destination/:name" element={<Destination />} />
       {/* <Route path="crew" element={<Crew />} /> */}
       <Route path="crew/:name" element={<Crew />} />
-      <Route path="technology" element={<Technology />} />
+      {/* <Route path="technology" element={<Technology />} /> */}
+      <Route path="technology/:tech" element={<Technologies />} />
     </Route>
   )
 );
