@@ -16,7 +16,7 @@ const Crew = () => {
             crewMembers.map((member) => {
               return (
                 <li key={member.name}>
-                  <NavLink to={`/crew/${member.name}`}>{member.role}</NavLink>
+                  <NavLink to={`/crew/${member.name}`}>*</NavLink>
                 </li>
               );
             })}

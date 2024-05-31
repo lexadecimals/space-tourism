@@ -9,7 +9,6 @@ const CrewMember = ({ name }) => {
         <>
           <h1>{name}</h1>
           <img src={`../../${crewMember.images.png}`} alt="" />
-          <h2>{crewMember.name}</h2>
           <p>{crewMember.bio}</p>
         </>
       )}
