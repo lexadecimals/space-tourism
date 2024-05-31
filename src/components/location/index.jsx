@@ -1,4 +1,3 @@
-import { planetaryData } from './data';
 import data from '../../data.json';
 
 const Location = ({ name }) => {
