@@ -4,9 +4,10 @@ const Homepage = () => {
   return (
     <>
       <div className={styles.container}>
-        <div>
+        <div className={styles.textContainer}>
           <h1 className={styles.h1}>
-            So, you want to travel to <span>space</span>
+            So, you want to travel to <br></br>
+            <span>space</span>
           </h1>
           <p className={styles.description}>
             Space Let’s face it; if you want to go to space, you might as well
@@ -15,7 +16,7 @@ const Homepage = () => {
             this world experience!
           </p>
         </div>
-        <a href="#">
+        <a href="#" className={styles.link}>
           <div className={styles.explore}>
             <p>Explore</p>
           </div>

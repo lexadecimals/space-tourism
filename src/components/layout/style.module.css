@@ -2,10 +2,12 @@
 .destination,
 .crew,
 .technology {
-  height: 100vh;
+  min-height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: grid;
+  grid-template-rows: 50px auto;
 }
 
 .home {
@@ -25,6 +27,12 @@
 }
 
 @media (min-width: 800px) {
+  .home,
+  .destination,
+  .crew,
+  .technology {
+    grid-template-rows: 75px auto;
+  }
   .home {
     background-image: url('../../assets/home/background-home-tablet.jpg');
   }
@@ -41,6 +49,12 @@
 }
 
 @media (min-width: 1200px) {
+  .home,
+  .destination,
+  .crew,
+  .technology {
+    grid-template-rows: 100px auto;
+  }
   .home {
     background-image: url('../../assets/home/background-home-desktop.jpg');
   }
