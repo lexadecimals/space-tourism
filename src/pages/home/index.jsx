@@ -17,9 +17,7 @@ const Homepage = () => {
           </p>
         </div>
         <a href="#" className={styles.link}>
-          <div className={styles.explore}>
-            <p>Explore</p>
-          </div>
+          Explore
         </a>
       </div>
     </>
