@@ -1,14 +1,13 @@
 import data from '../../data.json';
-import styles from './style.module.css';
 import {
   Heading,
-  Description,
   FactsContainer,
   Container,
   Fact,
   Span,
   Image,
 } from './locationStyles';
+import { Description } from '../../sharedStyles.js';
 
 const Location = ({ name, children }) => {
   const body = data.destinations.filter(

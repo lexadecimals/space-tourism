@@ -9,11 +9,6 @@ export const Heading = styled.h1`
   letter-spacing: 2px;
 `;
 
-export const Description = styled.p`
-  font-family: 'Barlow Condensed', sans-serif;
-  line-height: 1.8;
-  color: #d0d6f9;
-`;
 
 export const Container = styled.div`
   display: grid;
