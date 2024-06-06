@@ -1,31 +1,17 @@
-.content-location {
+/* .content-location {
   display: grid;
   gap: 1.5rem;
-}
+} */
 
 .img {
   max-width: 200px;
 }
-
-.heading-location-l {
-  text-transform: uppercase;
-  font-family: 'Bellfair', serif;
-  font-weight: 400;
-  font-size: 3.5rem;
-  letter-spacing: 2px;
-}
-
-.description-location {
-  font-family: 'Barlow Condensed', sans-serif;
-  line-height: 1.8;
-  color: #d0d6f9;
-}
-
+/* 
 .facts {
   display: grid;
-}
+} */
 
-.fact-location {
+/* .fact-location {
   font-size: 0.875rem;
   text-transform: uppercase;
   font-family: 'Barlow Condensed', sans-serif;
@@ -33,14 +19,14 @@
   font-weight: 100;
   font-style: normal;
   margin-bottom: 1rem;
-}
+} */
 .fact-location span {
-  font-family: 'Cinzel', serif;
+  /* font-family: 'Cinzel', serif;
   font-weight: 400;
   font-size: 1.75rem;
   color: white;
   display: block;
-  margin: 1rem;
+  margin: 1rem; */
 }
 
 @media (min-width: 700px) {

@@ -1,5 +1,14 @@
 import data from '../../data.json';
 import styles from './style.module.css';
+import {
+  Heading,
+  Description,
+  FactsContainer,
+  Container,
+  Fact,
+  Span,
+  Image,
+} from './locationStyles';
 
 const Location = ({ name, children }) => {
   const body = data.destinations.filter(
@@ -9,23 +18,23 @@ const Location = ({ name, children }) => {
     <>
       {body && (
         <>
-          <img src={`../../${body.images.png}`} alt="" className={styles.img} />
-          <div className={styles['content-location']}>
+          <Image src={`../../${body.images.png}`} alt="" />
+          <Container>
             {children}
-            <h2 className={styles['heading-location-l']}>{name}</h2>
-            <p className={styles['description-location']}>{body.description}</p>
+            <Heading>{name}</Heading>
+            <Description>{body.description}</Description>
             <hr />
-            <div className={styles.facts}>
-              <p className={styles['fact-location']}>
+            <FactsContainer>
+              <Fact>
                 avg. distance:<br></br>
-                <span>{body.distance}</span>
-              </p>
-              <p className={styles['fact-location']}>
+                <Span>{body.distance}</Span>
+              </Fact>
+              <Fact>
                 est. travel time: <br></br>
-                <span>{body.travel}</span>
-              </p>
-            </div>
-          </div>
+                <Span>{body.travel}</Span>
+              </Fact>
+            </FactsContainer>
+          </Container>
         </>
       )}
     </>
