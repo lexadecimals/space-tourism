@@ -2,17 +2,17 @@ import { NavLink, useParams } from 'react-router-dom';
 
 import Location from '../../components/location/index.jsx';
 import data from '../../data.json';
-import styles from './style.module.css';
+import { Container, Heading, Span } from './destinationStyles.js';
 
 const Destination = () => {
   const { name } = useParams();
   const destinations = data.destinations;
 
   return (
-    <div className={styles['container-destination']}>
-      <h2 className={styles['heading-destination-xs']}>
-        <span>01</span> Pick Your Destination
-      </h2>
+    <Container>
+      <Heading>
+        <Span>01</Span> Pick Your Destination
+      </Heading>
       <Location name={name}>
         <nav>
           <ul>
@@ -29,7 +29,7 @@ const Destination = () => {
           </ul>
         </nav>
       </Location>
-    </div>
+    </Container>
   );
 };
 

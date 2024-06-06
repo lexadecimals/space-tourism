@@ -1,6 +1,7 @@
 import data from '../../data.json';
 import {
   Heading,
+  MainContentContainer,
   FactsContainer,
   Container,
   Fact,
@@ -17,22 +18,24 @@ const Location = ({ name, children }) => {
     <>
       {body && (
         <>
-          <Image src={`../../${body.images.png}`} alt="" />
           <Container>
-            {children}
-            <Heading>{name}</Heading>
-            <Description>{body.description}</Description>
-            <hr />
-            <FactsContainer>
-              <Fact>
-                avg. distance:<br></br>
-                <Span>{body.distance}</Span>
-              </Fact>
-              <Fact>
-                est. travel time: <br></br>
-                <Span>{body.travel}</Span>
-              </Fact>
-            </FactsContainer>
+            <Image src={`../../${body.images.png}`} alt="" />
+            <MainContentContainer>
+              {children}
+              <Heading>{name}</Heading>
+              <Description>{body.description}</Description>
+              <hr />
+              <FactsContainer>
+                <Fact>
+                  avg. distance:<br></br>
+                  <Span>{body.distance}</Span>
+                </Fact>
+                <Fact>
+                  est. travel time: <br></br>
+                  <Span>{body.travel}</Span>
+                </Fact>
+              </FactsContainer>
+            </MainContentContainer>
           </Container>
         </>
       )}
