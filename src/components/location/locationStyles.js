@@ -27,6 +27,9 @@ export const Container = styled.div`
 export const MainContentContainer = styled.div`
   display: grid;
   gap: 1rem;
+  @media only screen and (min-width: 1200px) {
+    gap: 2rem
+  }
 `
 
 export const FactsContainer = styled.div`
