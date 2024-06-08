@@ -2,7 +2,8 @@ import { NavLink, useParams } from 'react-router-dom';
 
 import Location from '../../components/location/index.jsx';
 import data from '../../data.json';
-import { Container, Heading, Span } from './destinationStyles.js';
+import { SubHeading, Span } from '../../sharedStyles.js';
+import { Container } from '../../sharedStyles.js';
 
 const Destination = () => {
   const { name } = useParams();
@@ -10,9 +11,9 @@ const Destination = () => {
 
   return (
     <Container>
-      <Heading>
-        <Span>01</Span> Pick Your Destination
-      </Heading>
+      <SubHeading>
+        <Span>01</Span>Pick Your Destination
+      </SubHeading>
       <Location name={name}>
         <nav>
           <ul>
