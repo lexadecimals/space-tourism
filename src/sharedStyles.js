@@ -18,6 +18,9 @@ export const SubHeading = styled.h2`
     margin-bottom: 1rem;
     letter-spacing: 3px;
     font-weight: 100;
+    @media only screen and (min-width: 700px) {
+        font-size: 1.25rem;
+    }
     @media only screen and (min-width: 1200px) {
         font-size: 1.75rem;
         margin-bottom: 3rem;
@@ -28,7 +31,12 @@ export const Span = styled.span`
     opacity: 0.5;
     font-weight: 400;
     padding-right: 1.75rem;
-
+    @media only screen and (min-width: 700px) {
+        font-size: 1.25rem;
+    }
+    @media only screen and (min-width: 1200px) {
+        font-size: 1.75rem;
+    }
 `
 
 export const Container = styled.div`
