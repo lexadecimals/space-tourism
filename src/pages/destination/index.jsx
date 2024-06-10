@@ -5,7 +5,7 @@ import { Menu } from '../../components/menus/destinationMenu';
 import data from '../../data.json';
 
 import { Container, SubHeading, Span } from '../../sharedStyles.js';
-import { ListItem, StyledNavLink } from './destinationStyles.js';
+import { StyledNavLink } from './destinationStyles.js';
 
 const Destination = () => {
   const { name } = useParams();
@@ -21,13 +21,13 @@ const Destination = () => {
           {destinations &&
             destinations.map((location) => {
               return (
-                <ListItem key={location.description}>
+                <li key={location.description}>
                   <StyledNavLink
                     to={`/destination/${location.name.toLowerCase()}`}
                   >
                     {location.name}
                   </StyledNavLink>
-                </ListItem>
+                </li>
               );
             })}
         </Menu>

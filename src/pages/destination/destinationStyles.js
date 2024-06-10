@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-export const ListItem = styled.li`
 
-`
 
 export const StyledNavLink = styled(NavLink)`
     color: #D0D6F9;

@@ -1,8 +1,5 @@
 import styled from 'styled-components'
 
-export const Nav = styled.nav`
-`
-
 export const UnorderedList = styled.ul`
 display: grid;
 grid-template-columns: repeat(4, auto);

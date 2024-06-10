@@ -4,6 +4,7 @@ import {
   Container,
   MainContentContainer,
   Image,
+  GridContainer,
   GradientContainer,
   Gradient,
 } from './crewMemberStyles';
@@ -28,12 +29,14 @@ const CrewMember = ({ name, children }) => {
       {crewMember && (
         <>
           <MainContentContainer>
-            <Heading $fontsize={fontSizes.heading}>
-              <Span $fontsize={fontSizes.span}>{crewMember.role}</Span>
-              <br></br>
-              {name}
-            </Heading>
-            <Description>{crewMember.bio}</Description>
+            <div>
+              <Heading $fontsize={fontSizes.heading}>
+                <Span $fontsize={fontSizes.span}>{crewMember.role}</Span>
+                <br></br>
+                {name}
+              </Heading>
+              <Description>{crewMember.bio}</Description>
+            </div>
             {children}
           </MainContentContainer>
           <GradientContainer>
