@@ -20,6 +20,7 @@ export const SubHeading = styled.h2`
     font-weight: 100;
     @media only screen and (min-width: 700px) {
         font-size: 1.25rem;
+        text-align: left;
     }
     @media only screen and (min-width: 1200px) {
         font-size: 1.75rem;

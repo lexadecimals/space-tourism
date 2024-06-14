@@ -1,8 +1,9 @@
-import { Outlet, NavLink, useLocation } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import data from '../data.json';
 
 import Layout from '../components/layout/index.jsx';
-import styles from './style.module.css';
+import MainMenu from '../components/menus/mainMenu/index.jsx';
+import { UnorderedList, StyledNavLink } from './rootStyles.js';
 
 export const Root = () => {
   const crewMember = encodeURI(data.crew[0].name);
@@ -10,23 +11,29 @@ export const Root = () => {
   const tech = encodeURI(data.technology[0].name);
 
   return (
-    <Layout>
-      <nav className={styles.nav}>
-        <ul>
+    <Layout className="root">
+      <MainMenu>
+        <UnorderedList>
           <li>
-            <NavLink to="/">Home</NavLink>
+            <StyledNavLink to="/">Home</StyledNavLink>
           </li>
           <li>
-            <NavLink to={`/destination/${destination}`}>Destination</NavLink>
+            <StyledNavLink to={`/destination/${destination}`}>
+              <span>01</span>Destination
+            </StyledNavLink>
           </li>
           <li>
-            <NavLink to={`/crew/${crewMember}`}>Crew</NavLink>
+            <StyledNavLink to={`/crew/${crewMember}`}>
+              <span>02</span>Crew
+            </StyledNavLink>
           </li>
           <li>
-            <NavLink to={`/technology/${tech}`}>Technology</NavLink>
+            <StyledNavLink to={`/technology/${tech}`}>
+              <span>03</span>Technology
+            </StyledNavLink>
           </li>
-        </ul>
-      </nav>
+        </UnorderedList>
+      </MainMenu>
       <Outlet />
     </Layout>
   );
