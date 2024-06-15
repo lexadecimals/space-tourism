@@ -20,6 +20,10 @@ letter-spacing: 3px;
 font-weight: 100;
 color: white;
 text-decoration: none;
+
+// border-bottom: ${props => props.$selected === true ? "2px solid red" : "2px solid pink"}
+// color: ${props => props.$selected ? "red" : "blue"}
+
 &:visited {
     border-bottom: none;
 }
