@@ -11,13 +11,9 @@ import {
 import { Description } from '../../sharedStyles.js';
 
 const Location = ({ name, children }) => {
-  console.log('name', name);
   const body = data.destinations.filter((e) => {
-    // const match = name ? name : 'moon';
-    // console.log(match, name);
     return e.name.toLowerCase() === name;
   })[0];
-  console.log('body', body);
   return (
     <>
       {body && (

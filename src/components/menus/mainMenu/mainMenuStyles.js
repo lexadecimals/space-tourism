@@ -20,10 +20,14 @@ export const Nav = styled.nav`
     }
     `
 export const ShadedDiv = styled.div`
-    height: 100px;
+@media only screen and (min-width: 700px) {
+height: 100px;
     width: 100%;
     grid-column: 2/3;
     grid-row: 1/2;
     background-color: hsla(219, 24%, 12%, 1);
+}
+    
 
 `
+

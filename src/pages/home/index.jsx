@@ -16,7 +16,7 @@ const Homepage = () => {
           world experience!
         </Description>
       </div>
-      <StyledLink to="/destination">Explore</StyledLink>
+      <StyledLink to="/destination/moon">Explore</StyledLink>
     </Container>
   );
 };

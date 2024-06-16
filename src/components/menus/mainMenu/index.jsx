@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 
 const MainMenu = ({ children }) => {
   const params = useParams();
-
   console.log('params', params);
   return (
     <Nav>

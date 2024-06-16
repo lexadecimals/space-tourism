@@ -4,11 +4,14 @@ import data from '../data.json';
 import Layout from '../components/layout/index.jsx';
 import MainMenu from '../components/menus/mainMenu/index.jsx';
 import { UnorderedList, StyledNavLink } from './rootStyles.js';
+import { useParams } from 'react-router-dom';
 
 export const Root = () => {
   const crewMember = encodeURI(data.crew[0].name);
   const destination = data.destinations[0].name.toLowerCase();
   const tech = encodeURI(data.technology[0].name);
+
+  const { name } = useParams();
 
   return (
     <Layout className="root">

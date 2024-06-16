@@ -19,7 +19,6 @@ const Destination = () => {
   //   selected = true;
   // }
   const destinations = data.destinations;
-
   return (
     <Container>
       <SubHeading>
