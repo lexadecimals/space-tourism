@@ -3,7 +3,12 @@ import data from '../data.json';
 
 import Layout from '../components/layout/index.jsx';
 import MainMenu from '../components/menus/mainMenu/index.jsx';
-import { UnorderedList, StyledNavLink } from './rootStyles.js';
+import {
+  UnorderedList,
+  StyledNavLink,
+  HamburgerIcon,
+  CloseIcon,
+} from './rootStyles.js';
 import { useParams } from 'react-router-dom';
 
 export const Root = () => {
@@ -36,6 +41,8 @@ export const Root = () => {
             </StyledNavLink>
           </li>
         </UnorderedList>
+        <HamburgerIcon src="../assets/shared/icon-hamburger.svg"></HamburgerIcon>
+        <CloseIcon src="../assets/shared/icon-close.svg"></CloseIcon>
       </MainMenu>
       <Outlet />
     </Layout>

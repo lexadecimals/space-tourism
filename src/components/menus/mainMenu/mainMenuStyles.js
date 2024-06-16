@@ -11,23 +11,31 @@ export const Nav = styled.nav`
     width: 95%;
     margin-left: 5%;
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: 1fr;
-    height: 100px;
+    grid-template-rows: 100px auto;
+    grid-template-columns: 100px auto;
+    height: 100vh;
     align-items: center;
+
+    @media only screen and (min-width: 700px) {
+        grid-template-columns: auto auto;
+        grid-template-rows: 1fr;
+        height: 100px;
+   }
     @media only screen and (min-width: 1200px) {
          margin-top: 2rem;
     }
     `
 export const ShadedDiv = styled.div`
+background-color: hsla(219, 24%, 12%, 1);
+height: 100%;
+width: 100%;
+grid-column: 2/3;
+grid-row: 1/3;
+z-index: 1;
 @media only screen and (min-width: 700px) {
-height: 100px;
+    height: 100px;
     width: 100%;
-    grid-column: 2/3;
     grid-row: 1/2;
-    background-color: hsla(219, 24%, 12%, 1);
 }
-    
-
 `
 

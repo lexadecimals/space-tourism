@@ -2,13 +2,27 @@ import styled from 'styled-components'
 import { NavLink } from 'react-router-dom';
 
 export const UnorderedList = styled.ul`
+align-self: start;
+display: flex;
+flex-direction: column;
+
+grid-column: 2/3;
+grid-row: 2/3;
+z-index: 2;
+
+gap: 2rem;
+margin-left: 2rem;
+
 @media only screen and (min-width: 700px) {
+    align-self: initial;
     width: 100%;
-    display: flex;
+    flex-direction: row;
     justify-content: space-around;
     grid-column: 2/3;
     grid-row: 1/2;
     color: white;
+    gap: 0;
+    margin-left: 0;
 }
     `
 
@@ -21,8 +35,6 @@ font-weight: 100;
 color: white;
 text-decoration: none;
 
-// border-bottom: ${props => props.$selected === true ? "2px solid red" : "2px solid pink"}
-// color: ${props => props.$selected ? "red" : "blue"}
 
 &:visited {
     border-bottom: none;
@@ -30,15 +42,47 @@ text-decoration: none;
 &:hover {
     color: white;
     border-bottom: 2px solid silver;
-    padding-bottom: 37px;
+    padding-bottom: 10px;
+    @media only screen and (min-width: 700px) {
+        padding-bottom: 37px;
+    }
+
 }
 &.active {
     color: white;
     border-bottom: 2px solid white;
-    padding-bottom: 37px;
+    padding-bottom: 10px;
+    @media only screen and (min-width: 700px) {
+        padding-bottom: 37px;
+    }
 }
 span {
     margin-right: 1rem;
     font-weight: 700;
+}
+`
+
+export const HamburgerIcon = styled.img`
+cursor: pointer;
+grid-column: 2/3;
+grid-row: 1/2;
+justify-self: end;
+z-index: 2;
+@media only screen and (min-width: 700px) {
+    display: none;
+}
+`
+
+export const CloseIcon = styled.img`
+cursor: pointer;
+grid-column: 2/3;
+grid-row: 1/2;
+justify-self: end;
+z-index: 2;
+
+@media only screen and (min-width: 700px) {
+    display: none;
+    
+
 }
 `
