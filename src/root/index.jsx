@@ -33,7 +33,7 @@ export const Root = () => {
 
   return (
     <Layout className="root">
-      <MainMenu open={menuIsOpen}>
+      <MainMenu open={menuIsOpen} handleClick={closeMenuOnMobile}>
         <UnorderedList $open={menuIsOpen}>
           <li>
             <StyledNavLink to="/" onClick={closeMenuOnMobile}>

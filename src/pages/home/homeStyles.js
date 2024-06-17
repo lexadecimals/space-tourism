@@ -52,6 +52,8 @@ export const StyledLink = styled(Link)`
     display: block;
     height: 140px;
     width: 140px;
+    grid-column: 1/2;
+    grid-row: 1/2;
     border-radius: 50%;
     background: white;
     line-height: 140px;
@@ -75,10 +77,41 @@ export const StyledLink = styled(Link)`
         font-size: 2rem;
     }
     @media only screen and (min-width: 1200px) {
-        justify-self: end;
-        align-self: end;
+        
   }
     }
- 
+
+`
+
+export const StyledButtonContainer = styled.div`
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    width: 200px;
+    height: 200px;
+    justify-items: center;
+    align-items: center;
+    @media only screen and (min-width: 700px) {
+        width: 400px;
+        height: 400px;
+    }
+    @media only screen and (min-width: 1200px) {
+        justify-self: end;
+        align-self: end;
+    }
+`
+
+export const StyledCircle = styled.div`
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        grid-row: 1/2;
+        grid-column: 1/2;
+        transition: background-color 1s;
+        background-color: ${props => props.$hover === true ? "hsla(0, 100%, 99%, 0.1)" : "transparent"};
+        @media only screen and (min-width: 700px) {
+            width: 400px;
+            height: 400px;
+        }
 
 `

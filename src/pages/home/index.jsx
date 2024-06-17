@@ -1,7 +1,27 @@
-import { Container, Heading, Span, StyledLink } from './homeStyles';
+import { useState } from 'react';
+
+import {
+  Container,
+  Heading,
+  Span,
+  StyledLink,
+  StyledCircle,
+  StyledButtonContainer,
+} from './homeStyles';
 import { Description } from '../../sharedStyles';
 
 const Homepage = () => {
+  const [hoverState, setHoverState] = useState(false);
+
+  const handleMouseOver = () => {
+    console.log('in');
+    setHoverState(true);
+  };
+
+  const handleMouseOut = () => {
+    setHoverState(false);
+    console.log('out');
+  };
   return (
     <Container>
       <div>
@@ -16,7 +36,16 @@ const Homepage = () => {
           world experience!
         </Description>
       </div>
-      <StyledLink to="/destination/moon">Explore</StyledLink>
+      <StyledButtonContainer>
+        <StyledCircle $hover={hoverState}></StyledCircle>
+        <StyledLink
+          to="/destination/moon"
+          onMouseOver={handleMouseOver}
+          onMouseOut={handleMouseOut}
+        >
+          Explore
+        </StyledLink>
+      </StyledButtonContainer>
     </Container>
   );
 };
