@@ -10,12 +10,12 @@ export const StyledNavLink = styled(NavLink)`
 export const Nav = styled.nav`
     width: 95%;
     margin-left: 5%;
+    grid-column: 1/2;
+    grid-row: 1/3;
     display: grid;
     grid-template-rows: 100px auto;
     grid-template-columns: 100px auto;
-    height: 100vh;
     align-items: center;
-
     @media only screen and (min-width: 700px) {
         grid-template-columns: auto auto;
         grid-template-rows: 1fr;
@@ -27,7 +27,7 @@ export const Nav = styled.nav`
     `
 export const ShadedDiv = styled.div`
 display: ${props => props.$open === true ? "block" : "none"};
-background-color: hsla(219, 24%, 12%, 1);
+backdrop-filter: blur(56px);
 height: 100%;
 width: 100%;
 grid-column: 2/3;
@@ -38,6 +38,11 @@ z-index: 1;
     height: 100px;
     width: 100%;
     grid-row: 1/2;
+    background-color: hsla(219, 24%, 12%, 1);
+}
+
+@media only screen and (min-width: 1200px) {
+    background-color: initial;
 }
 `
 

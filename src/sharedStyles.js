@@ -42,6 +42,8 @@ export const Span = styled.span`
 
 export const Container = styled.div`
     text-align: center;
+    grid-row: 2/3;
+    grid-column: 1/2;
     width: ${props => props.$technology ? "100%" : "90%"};
     margin: 0 auto 2rem;
     @media only screen and (min-width: 1200px) {
