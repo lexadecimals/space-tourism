@@ -8,7 +8,7 @@ flex-direction: column;
 
 grid-column: 2/3;
 grid-row: 2/3;
-z-index: 2;
+z-index: 4;
 gap: 2rem;
 margin-left: 2rem;
 
@@ -67,7 +67,7 @@ cursor: pointer;
 grid-column: 2/3;
 grid-row: 1/2;
 justify-self: end;
-z-index: 2;
+z-index: 4;
 margin-right: 10%;
 @media only screen and (min-width: 700px) {
     display: none;
@@ -79,7 +79,7 @@ cursor: pointer;
 grid-column: 2/3;
 grid-row: 1/2;
 justify-self: end;
-z-index: 2;
+z-index: 4;
 margin-right: 10%;
 @media only screen and (min-width: 700px) {
     display: none;

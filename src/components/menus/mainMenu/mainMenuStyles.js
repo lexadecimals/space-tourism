@@ -32,7 +32,7 @@ height: 100%;
 width: 100%;
 grid-column: 2/3;
 grid-row: 1/3;
-z-index: 1;
+z-index: 3;
 @media only screen and (min-width: 700px) {
     display: block;
     height: 100px;
