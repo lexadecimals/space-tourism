@@ -3,17 +3,17 @@ import { NavLink } from 'react-router-dom';
 
 export const UnorderedList = styled.ul`
 align-self: start;
-display: flex;
+display: ${props => props.$open === true ? "flex" : "none"};
 flex-direction: column;
 
 grid-column: 2/3;
 grid-row: 2/3;
 z-index: 2;
-
 gap: 2rem;
 margin-left: 2rem;
 
 @media only screen and (min-width: 700px) {
+    display: flex;
     align-self: initial;
     width: 100%;
     flex-direction: row;
@@ -68,6 +68,7 @@ grid-column: 2/3;
 grid-row: 1/2;
 justify-self: end;
 z-index: 2;
+margin-right: 10%;
 @media only screen and (min-width: 700px) {
     display: none;
 }
@@ -79,7 +80,7 @@ grid-column: 2/3;
 grid-row: 1/2;
 justify-self: end;
 z-index: 2;
-
+margin-right: 10%;
 @media only screen and (min-width: 700px) {
     display: none;
     

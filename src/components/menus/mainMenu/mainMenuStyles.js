@@ -26,6 +26,7 @@ export const Nav = styled.nav`
     }
     `
 export const ShadedDiv = styled.div`
+display: ${props => props.$open === true ? "block" : "none"};
 background-color: hsla(219, 24%, 12%, 1);
 height: 100%;
 width: 100%;
@@ -33,6 +34,7 @@ grid-column: 2/3;
 grid-row: 1/3;
 z-index: 1;
 @media only screen and (min-width: 700px) {
+    display: block;
     height: 100px;
     width: 100%;
     grid-row: 1/2;
