@@ -49,7 +49,7 @@ export const Gradient = styled.div`
     grid-row: 1/2;
     width: 100%;
     height: 100%;
-    z-index: 10;
+    z-index: 2;
     background-color: rgba(0, 0, 0, 0);
     background: linear-gradient(0deg, rgba(12, 14, 25, 1) 0%, rgba(0,0,0,0) 12%);;
 `

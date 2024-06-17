@@ -9,8 +9,16 @@ import { StyledNavLink } from './destinationStyles.js';
 
 const Destination = () => {
   const { name } = useParams();
+  // let selected = false;
+  // if (
+  //   name === 'moon' ||
+  //   name === 'titan' ||
+  //   name === 'europa' ||
+  //   name === 'mars'
+  // ) {
+  //   selected = true;
+  // }
   const destinations = data.destinations;
-
   return (
     <Container>
       <SubHeading>
@@ -23,6 +31,7 @@ const Destination = () => {
               return (
                 <li key={location.description}>
                   <StyledNavLink
+                    // $selected={selected}
                     to={`/destination/${location.name.toLowerCase()}`}
                   >
                     {location.name}

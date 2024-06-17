@@ -11,9 +11,9 @@ import {
 import { Description } from '../../sharedStyles.js';
 
 const Location = ({ name, children }) => {
-  const body = data.destinations.filter(
-    (e) => e.name.toLowerCase() === name
-  )[0];
+  const body = data.destinations.filter((e) => {
+    return e.name.toLowerCase() === name;
+  })[0];
   return (
     <>
       {body && (

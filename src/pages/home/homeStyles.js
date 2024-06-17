@@ -26,6 +26,8 @@ export const Span = styled.span`
 `
 
 export const Container = styled.div`
+  grid-column: 1/2;
+  grid-row: 2/3;
   display: grid;
   grid-template-columns: 1fr;
   text-align: center;
