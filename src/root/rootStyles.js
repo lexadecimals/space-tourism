@@ -34,8 +34,6 @@ letter-spacing: 3px;
 font-weight: 100;
 color: white;
 text-decoration: none;
-
-
 &:visited {
     border-bottom: none;
 }
