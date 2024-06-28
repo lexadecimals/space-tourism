@@ -15,15 +15,19 @@ margin-left: 2rem;
 @media only screen and (min-width: 700px) {
     display: flex;
     align-self: initial;
-    width: 80%;
+    width: 100%;
     flex-direction: row;
     justify-content: space-around;
     grid-column: 2/3;
     grid-row: 1/2;
     color: white;
     gap: 0;
-    margin-left: 20%;
+    margin-left: 0;
 }
+@media only screen and (min-width: 1200px) {
+    margin-left: 20%;
+    width: 80%;
+
     `
 
 export const StyledNavLink = styled(NavLink)`
@@ -54,10 +58,18 @@ text-decoration: none;
         padding-bottom: 37px;
     }
 }
-span {
+
+`
+
+export const StyledSpan = styled.span`
     margin-right: 1rem;
     font-weight: 700;
-}
+    @media only screen and (min-width: 700px) {
+        display: ${props => props.$home && "none"};
+    }
+    @media only screen and (min-width: 1200px) {
+        display: initial;
+    }
 `
 
 export const HamburgerIcon = styled.img`

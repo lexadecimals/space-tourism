@@ -1,4 +1,4 @@
-import { Outlet, useLocation } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import data from '../data.json';
 import { useState } from 'react';
 
@@ -9,6 +9,7 @@ import {
   StyledNavLink,
   HamburgerIcon,
   CloseIcon,
+  StyledSpan,
 } from './rootStyles.js';
 
 export const Root = () => {
@@ -36,7 +37,7 @@ export const Root = () => {
         <UnorderedList $open={menuIsOpen}>
           <li>
             <StyledNavLink to="/" onClick={closeMenuOnMobile}>
-              <span>00</span> Home
+              <StyledSpan $home>00</StyledSpan>Home
             </StyledNavLink>
           </li>
           <li>
@@ -44,7 +45,7 @@ export const Root = () => {
               to={`/destination/${destination}`}
               onClick={closeMenuOnMobile}
             >
-              <span>01</span>Destination
+              <StyledSpan>01</StyledSpan>Destination
             </StyledNavLink>
           </li>
           <li>
@@ -52,7 +53,7 @@ export const Root = () => {
               to={`/crew/${crewMember}`}
               onClick={closeMenuOnMobile}
             >
-              <span>02</span>Crew
+              <StyledSpan>02</StyledSpan>Crew
             </StyledNavLink>
           </li>
           <li>
@@ -60,7 +61,7 @@ export const Root = () => {
               to={`/technology/${tech}`}
               onClick={closeMenuOnMobile}
             >
-              <span>03</span>Technology
+              <StyledSpan>03</StyledSpan>Technology
             </StyledNavLink>
           </li>
         </UnorderedList>

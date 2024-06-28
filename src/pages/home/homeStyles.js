@@ -34,7 +34,6 @@ export const Container = styled.div`
   justify-items: center;
   width: 90%;
     margin: 0 auto;
-
   @media only screen and (min-width: 700px) {
     width: 60%;
     }
