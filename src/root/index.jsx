@@ -10,7 +10,6 @@ import {
   HamburgerIcon,
   CloseIcon,
 } from './rootStyles.js';
-import { useParams } from 'react-router-dom';
 
 export const Root = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -37,7 +36,7 @@ export const Root = () => {
         <UnorderedList $open={menuIsOpen}>
           <li>
             <StyledNavLink to="/" onClick={closeMenuOnMobile}>
-              Home
+              <span>00</span> Home
             </StyledNavLink>
           </li>
           <li>

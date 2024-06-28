@@ -15,14 +15,14 @@ margin-left: 2rem;
 @media only screen and (min-width: 700px) {
     display: flex;
     align-self: initial;
-    width: 100%;
+    width: 80%;
     flex-direction: row;
     justify-content: space-around;
     grid-column: 2/3;
     grid-row: 1/2;
     color: white;
     gap: 0;
-    margin-left: 0;
+    margin-left: 20%;
 }
     `
 

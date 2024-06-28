@@ -11,7 +11,8 @@ export const Heading = styled.h1`
     font-weight: 100;
     @media only screen and (min-width: 700px) {
         font-size: 1.75rem;
-        line-height: 8rem;
+        line-height: 9rem;
+        margin: 1rem 0;
     }
 `
 
@@ -28,18 +29,18 @@ export const Span = styled.span`
 export const Container = styled.div`
   grid-column: 1/2;
   grid-row: 2/3;
-  display: grid;
   grid-template-columns: 1fr;
   text-align: center;
   justify-items: center;
-  align-content: space-evenly;
   width: 90%;
-  margin: 0 auto 2rem;
-  gap: 4rem;
+    margin: 0 auto;
+
   @media only screen and (min-width: 700px) {
     width: 60%;
     }
     @media only screen and (min-width: 1200px) {
+        text-align: left;
+        display: grid;
         grid-template-columns: 40% 50%;
         align-items: center;
         margin-top: 0;
@@ -87,13 +88,14 @@ export const StyledButtonContainer = styled.div`
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
-    width: 200px;
     height: 200px;
+    margin: 5rem auto 0;
     justify-items: center;
     align-items: center;
     @media only screen and (min-width: 700px) {
         width: 400px;
         height: 400px;
+        margin-top: 0;
     }
     @media only screen and (min-width: 1200px) {
         justify-self: end;

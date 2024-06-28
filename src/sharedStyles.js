@@ -46,11 +46,11 @@ export const Container = styled.div`
     grid-column: 1/2;
     width: ${props => props.$technology ? "100%" : "90%"};
     margin: 0 auto 2rem;
-    @media only screen and (min-width: 1200px) {
-        text-align: left;
+    @media only screen and (min-width: 700px) {
         width: ${props => props.$technology ? "100%" : "75%"};
     }
     @media only screen and (min-width: 1200px) {
+        text-align: left;
         width: ${props => props.$technology ? "80%" : "65%"};
         margin-left:  ${props => props.$technology && "20%"};
     }

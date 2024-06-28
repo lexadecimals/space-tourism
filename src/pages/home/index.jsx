@@ -23,7 +23,7 @@ const Homepage = () => {
     console.log('out');
   };
   return (
-    <Container>
+    <Container className="home-container">
       <div>
         <Heading>
           So, you want to travel to <br></br>

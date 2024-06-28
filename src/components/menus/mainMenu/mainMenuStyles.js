@@ -14,7 +14,7 @@ export const Nav = styled.nav`
     grid-row: 1/3;
     display: grid;
     grid-template-rows: 100px auto;
-    grid-template-columns: 100px auto;
+    grid-template-columns: 100px 60%;
     align-items: center;
     @media only screen and (min-width: 700px) {
         grid-template-columns: auto auto;
