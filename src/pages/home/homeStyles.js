@@ -10,8 +10,7 @@ export const Heading = styled.h1`
   font-weight: 100;
   @media only screen and (min-width: 700px) {
     font-size: 1.75rem;
-    line-height: 9rem;
-    margin: 1rem 0;
+    line-height: 8rem;
   }
 `;
 
@@ -41,12 +40,14 @@ export const Container = styled.div`
   @media only screen and (min-width: 1200px) {
     text-align: left;
     display: grid;
-    grid-template-columns: 40% 50%;
-    align-items: center;
+    grid-template-columns: 50% 50%;
+    align-content: end;
     margin-top: 0;
+    padding-bottom: 5%;
     width: 80%;
-    max-width: 1000px;
-    gap: 10%;
+  }
+  @media only screen and (min-width: 1400px) {
+    max-width: 1200px;
   }
 `;
 export const StyledLink = styled(Link)`
@@ -96,8 +97,7 @@ export const StyledButtonContainer = styled.div`
     margin-top: 0;
   }
   @media only screen and (min-width: 1200px) {
-    justify-self: end;
-    align-self: end;
+    margin-right: -65px;
   }
 `;
 

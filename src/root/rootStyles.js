@@ -32,7 +32,7 @@ export const UnorderedList = styled.ul`
 export const StyledNavLink = styled(NavLink)`
   font-size: 1rem;
   text-transform: uppercase;
-  font-family: var(--font-serif), sans-serif;
+  font-family: var(--font-main), sans-serif;
   letter-spacing: 3px;
   font-weight: 100;
   color: white;
