@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 
 export const StyledNavLink = styled(NavLink)`
-    color: #D0D6F9;
+    color: var(--text);
     text-transform: uppercase;
     letter-spacing: 2px;
     text-decoration: none;

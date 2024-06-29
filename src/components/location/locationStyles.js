@@ -42,8 +42,7 @@ export const FactsContainer = styled.div`
 export const Fact = styled.p`
     font-size: 0.875rem;
     text-transform: uppercase;
-    font-family: 'Barlow Condensed', sans-serif;
-    color: #d0d6f9;
+    color: var(--text);
     font-weight: 100;
     font-style: normal;
     margin-bottom: 1rem;

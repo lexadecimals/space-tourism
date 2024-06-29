@@ -19,7 +19,7 @@ export const StyledNavLink = styled(NavLink)`
         width: 15px;
         height: 15px;
     }
-//     color: #D0D6F9;
+//     color: var(--text);
 //     text-transform: uppercase;
 //     letter-spacing: 2px;
 //     text-decoration: none;

@@ -3,6 +3,10 @@
 :root {
   box-sizing: border-box;
   font-size: 16px;
+  --text: #d0d6f9;
+  --white: #fff;
+  --font-serif: 'Bellefair';
+  --font-main: 'Barlow Condensed';
 }
 
 /* alternative for ie users: */
@@ -26,8 +30,8 @@ html {
   height: 100%;
   background: rgb(3, 3, 20);
   color: white;
-  font-size: 1.125rem;
-  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-family: var(--font-main), sans-serif;
   font-weight: 100;
 }
 
