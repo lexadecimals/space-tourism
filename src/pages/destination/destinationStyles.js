@@ -10,8 +10,6 @@ export const StyledNavLink = styled(NavLink)`
     text-decoration: none;
     display: inline-block;
     font-size: 0.875rem;
- 
-
     padding-bottom: 10px;
     &:hover {
         border-bottom: 2px solid silver;

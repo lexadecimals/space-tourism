@@ -3,25 +3,31 @@ import styled from 'styled-components';
 export const Description = styled.p`
   line-height: 1.8;
   color: var(--text);
+  @media only screen and (min-width: 700px) {
+    width: 70%;
+    margin: 0 auto;
+  }
   @media only screen and (min-width: 1200px) {
     font-size: 1.125rem;
+    margin: 0;
+    width: 100%;
   }
 `;
 
 export const SubHeading = styled.h2`
   font-size: 1rem;
   text-transform: uppercase;
-  line-height: 6rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0 3rem;
   letter-spacing: 3px;
   font-weight: 100;
   @media only screen and (min-width: 700px) {
     font-size: 1.25rem;
     text-align: left;
+    margin-bottom: 4rem;
   }
   @media only screen and (min-width: 1200px) {
     font-size: 1.75rem;
-    margin-bottom: 3rem;
+    margin: 0;
   }
 `;
 
@@ -44,12 +50,15 @@ export const Container = styled.div`
   width: ${(props) => (props.$technology ? '100%' : '90%')};
   margin: 0 auto 2rem;
   @media only screen and (min-width: 700px) {
-    width: ${(props) => (props.$technology ? '100%' : '75%')};
+    width: ${(props) => (props.$technology && '100%')};
   }
   @media only screen and (min-width: 1200px) {
     text-align: left;
     width: ${(props) => (props.$technology ? '80%' : '65%')};
     margin-left: ${(props) => props.$technology && '20%'};
+    display: grid;
+    grid-template-rows: 50px auto;
+    margin-bottom: 0;
   }
 `;
 
