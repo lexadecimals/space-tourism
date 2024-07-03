@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Nav = styled.nav`
 margin-top: 3rem;
 @media only screen and (min-width: 1200px) {
-    align-self: end;    
+    align-self: center;    
     margin-top: 0;
   }
 `
