@@ -55,11 +55,14 @@ export const Container = styled.div`
   }
   @media only screen and (min-width: 1200px) {
     text-align: left;
-    width: ${(props) => (props.$technology ? '80%' : '65%')};
+    width: ${(props) => (props.$technology ? '80%' : '80%')};
     margin-left: ${(props) => props.$technology && '20%'};
     display: grid;
     grid-template-rows: 50px auto;
     margin-bottom: 0;
+  }
+  @media only screen and (min-width: 1400px) {
+    width: ${(props) => (props.$technology ? '80%' : '65%')};
   }
 `;
 

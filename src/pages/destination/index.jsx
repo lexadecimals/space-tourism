@@ -11,7 +11,7 @@ const Destination = () => {
   const { name } = useParams();
   const destinations = data.destinations;
   return (
-    <Container>
+    <Container className="here">
       <SubHeading>
         <Span>01</Span>Pick Your Destination
       </SubHeading>

@@ -88,9 +88,8 @@ export const Image = styled.img`
         max-width: 300px;
     }
     @media only screen and (min-width:1200px) {
-        max-width: 400px;
+        max-width: 500px;
+        justify-self: start;
     }
-    @media only screen and (min-width:1400px) {
-        max-width: 400px;
-    }
+
 `
