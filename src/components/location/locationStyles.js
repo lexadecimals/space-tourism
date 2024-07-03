@@ -24,7 +24,6 @@ export const Container = styled.div`
   display: grid;
   gap: 3rem;
   justify-items: center;
-
   @media only screen and (min-width: 700px) {
     gap: 5rem;
   }
@@ -32,11 +31,13 @@ export const Container = styled.div`
   @media only screen and (min-width: 1200px) {
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    
   }
 `;
 
 export const MainContentContainer = styled.div`
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 1.75rem;
   @media only screen and (min-width: 1200px) {
     gap: 2rem

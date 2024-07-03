@@ -11,6 +11,7 @@ export const Description = styled.p`
     font-size: 1.125rem;
     margin: 0;
     width: 100%;
+    padding-bottom: 1rem;
   }
 `;
 
