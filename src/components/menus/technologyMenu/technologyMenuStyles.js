@@ -24,13 +24,3 @@ export const StyledNav = styled.nav`
     margin-bottom: 0;
   }
 `;
-
-// export const StyledNav = styled.nav`
-//   margin-bottom: ${(props) => props.$description && "2rem"};
-//   @media only screen and (min-width: 1200px) {
-//     grid-column: ${(props) => props.$description && "1/2"};
-//     grid-row: ${(props) => props.$description && "1/3"};
-//     height: ${(props) => props.$description && "100%"};
-//     margin-bottom: ${(props) => props.$description && "0"};
-//   }
-// `;

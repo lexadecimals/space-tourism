@@ -47,6 +47,6 @@ export const MainContentContainer = styled.div`
 export const StyledDiv = styled.div`
   @media only screen and (min-width: 1200px) {
     grid-column: 2/4;
-    grid-row: ${(props) => props.$description ? "2/3" : "1/2"};
+    grid-row: ${(props) => (props.$description ? '2/3' : '1/2')};
   }
 `;

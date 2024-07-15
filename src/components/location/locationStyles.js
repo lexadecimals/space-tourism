@@ -1,5 +1,4 @@
-
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const StyledH1 = styled.h1`
   text-transform: uppercase;
@@ -11,14 +10,12 @@ export const StyledH1 = styled.h1`
   @media only screen and (min-width: 700px) {
     font-size: 5rem;
     line-height: 5rem;
-  
   }
   @media only screen and (min-width: 1200px) {
-      font-size: 6rem;
-      line-height: 6rem;
-    }
+    font-size: 6rem;
+    line-height: 6rem;
+  }
 `;
-
 
 export const Container = styled.div`
   display: grid;
@@ -31,7 +28,6 @@ export const Container = styled.div`
   @media only screen and (min-width: 1200px) {
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    
   }
 `;
 
@@ -40,9 +36,9 @@ export const MainContentContainer = styled.div`
   flex-direction: column;
   gap: 1.75rem;
   @media only screen and (min-width: 1200px) {
-    gap: 2rem
+    gap: 2rem;
   }
-`
+`;
 
 export const FactsContainer = styled.div`
   display: grid;
@@ -55,41 +51,39 @@ export const FactsContainer = styled.div`
     margin: 0;
     width: 100%;
     gap: 1rem;
-    }
+  }
 `;
 
 export const StyledFactP = styled.p`
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 1.75px;
-    color: var(--text);
-    font-weight: 100;
-    font-style: normal;
-    margin-bottom: 1rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 1.75px;
+  color: var(--text);
+  font-weight: 100;
+  font-style: normal;
+  margin-bottom: 1rem;
 `;
 
 export const StyledSpan = styled.span`
-    font-family: var(--font-serif), serif;
-    font-weight: 400;
-    font-size: 1.75rem;
-    color: white;
-    display: block;
-    margin: 1rem;
-    @media only screen and (min-width: 1200px) {
-        margin: 1rem 0;
-    }
-
-`
+  font-family: var(--font-serif), serif;
+  font-weight: 400;
+  font-size: 1.75rem;
+  color: white;
+  display: block;
+  margin: 1rem;
+  @media only screen and (min-width: 1200px) {
+    margin: 1rem 0;
+  }
+`;
 
 export const StyledImage = styled.img`
-    max-width: 150px;
-    transition: max-width 1s;
-    @media only screen and (min-width:700px) {
-        max-width: 300px;
-    }
-    @media only screen and (min-width:1200px) {
-        max-width: 500px;
-        justify-self: start;
-    }
-
-`
+  max-width: 150px;
+  transition: max-width 1s;
+  @media only screen and (min-width: 700px) {
+    max-width: 300px;
+  }
+  @media only screen and (min-width: 1200px) {
+    max-width: 500px;
+    justify-self: start;
+  }
+`;
