@@ -1,21 +1,18 @@
 import { useLocation } from 'react-router-dom';
 
-import styles from './style.module.css';
+import { StyledDiv } from './layoutStyles';
 
 const Layout = ({ children }) => {
   const loc = useLocation().pathname;
-  let classNm;
 
   if (loc.indexOf('destination') > 0) {
-    classNm = 'destination';
+    return <StyledDiv $destination>{children}</StyledDiv>;
   } else if (loc.indexOf('technology') > 0) {
-    classNm = 'technology';
+    return <StyledDiv $technology>{children}</StyledDiv>;
   } else if (loc.indexOf('crew') > 0) {
-    classNm = 'crew';
+    return <StyledDiv $crew>{children}</StyledDiv>;
   } else {
-    classNm = 'home';
+    return <StyledDiv $home>{children}</StyledDiv>;
   }
-
-  return classNm && <div className={styles[classNm]}>{children}</div>;
 };
 export default Layout;
