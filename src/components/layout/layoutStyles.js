@@ -17,6 +17,7 @@ export const StyledDiv = styled.div`
                     : props.$technology &&
                     "url('../../assets/technology/background-technology-mobile.jpg')"};
   @media (min-width: 700px) {
+    grid-template-rows: calc(100px + 2rem) auto;
     background-image: ${(props) =>
         props.$home
             ? "url('../../assets/home/background-home-tablet.jpg')"
@@ -28,6 +29,7 @@ export const StyledDiv = styled.div`
                     "url('../../assets/technology/background-technology-tablet.jpg')"};
   }
   @media (min-width: 1200px) {
+    grid-template-rows: calc(100px + 4rem) auto;
     background-image: ${(props) =>
         props.$home
             ? "url('../../assets/home/background-home-desktop.jpg')"
@@ -39,3 +41,8 @@ export const StyledDiv = styled.div`
                     "url('../../assets/technology/background-technology-desktop.jpg')"};
   }
 `;
+
+
+
+
+
