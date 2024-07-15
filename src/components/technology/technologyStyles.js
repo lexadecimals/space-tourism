@@ -7,8 +7,9 @@ export const Picture = styled.picture`
         object-fit: cover;
     }
     @media only screen and (min-width: 1200px) {
-        grid-column: 2/3;
-        grid-row: 1/4;
+        /* grid-column: 2/3;
+        grid-row: 1/4; */
+        order: 2;
         img {
             min-width: initial;
             object-fit: initial;
@@ -19,9 +20,11 @@ export const Picture = styled.picture`
 
 export const Container = styled.div`
     @media only screen and (min-width: 1200px) {
-        display: grid;
+        /* display: grid;
         grid-template-columns:1fr auto;
-        grid-template-rows: 15% auto 15%;
+        grid-template-rows: 15% auto 15%; */
+        display: flex;
+        align-items: center;
         gap: 2rem;
 }
 `
@@ -31,13 +34,14 @@ export const MainContentContainer = styled.div`
     margin: 2rem auto;
 @media only screen and (min-width: 1200px) {
     @media only screen and (min-width: 1200px) {
-        width: 100%;
+        width: 60%;
         margin: 0;
-        grid-column: 1/2;
-        grid-row: 2/3;
+        /* grid-column: 1/2;
+        grid-row: 2/3; */
         display: grid;
         gap: 2rem;
         grid-template-columns:20% auto;
         grid-template-rows: auto auto;
+}
 }
 `

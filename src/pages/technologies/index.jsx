@@ -12,7 +12,7 @@ const Technologies = () => {
   const technologies = data.technology;
   return (
     <Container $technology className="you are here">
-      <SubHeading>
+      <SubHeading $technology>
         <Span>03</Span>Space Launch 101
       </SubHeading>
       <Technology tech={tech}>

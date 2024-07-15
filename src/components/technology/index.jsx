@@ -41,12 +41,13 @@ const Technology = ({ tech, children }) => {
             {children}
             <div className="technology-heading">
               <Heading $fontsize={fontSizes.heading}>
-                <Span $fontsize={fontSizes.span}>The Terminology</Span>
+                <Span $fontsize={fontSizes.span} $technology className="here">
+                  The Terminology...
+                </Span>
                 <br></br>
                 {tech}
               </Heading>
             </div>
-            {/* <div className="technology-main-content-container"> */}
             <div className="technology-description">
               <Description>{techType.description}</Description>
               {/* </div> */}

@@ -24,7 +24,8 @@ export const SubHeading = styled.h2`
   @media only screen and (min-width: 700px) {
     font-size: 1.25rem;
     text-align: left;
-    margin-bottom: 4rem;
+    margin: ${(props) => (props.$technology ? "1rem 0 4rem 5%" : "1rem 0 4rem")};
+
   }
   @media only screen and (min-width: 1200px) {
     font-size: 1.75rem;
@@ -40,7 +41,7 @@ export const Span = styled.span`
     font-size: 1.25rem;
   }
   @media only screen and (min-width: 1200px) {
-    font-size: 1.75rem;
+     font-size: 1.75rem;
   }
 `;
 
@@ -87,6 +88,9 @@ export const HeadingSpan = styled.span`
     font-size: ${(props) => props.$fontsize.medium};
   }
   @media only screen and (min-width: 1200px) {
-    font-size: ${(props) => props.$fontsize.large};
+    font-size: ${(props) => props.$technology ? props.$fontsize.medium : props.$fontsize.large};
+  }
+  @media only screen and (min-width: 1250px) {
+    font-size: ${(props) => props.$technology && props.$fontsize.large};
   }
 `;
