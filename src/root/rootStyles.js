@@ -5,7 +5,6 @@ export const StyledUnorderedList = styled.ul`
   align-self: start;
   display: ${(props) => (props.$open === true ? 'flex' : 'none')};
   flex-direction: column;
-
   grid-column: 2/3;
   grid-row: 2/3;
   z-index: 4;
