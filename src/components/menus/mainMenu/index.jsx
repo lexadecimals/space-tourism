@@ -1,14 +1,14 @@
-import { StyledNavLink, Nav, ShadedDiv } from './mainMenuStyles';
+import { StyledNavLink, StyledNav, ShadedDiv } from './mainMenuStyles';
 
 const MainMenu = ({ children, open, handleClick }) => {
   return (
-    <Nav>
+    <StyledNav>
       <StyledNavLink to="/" onClick={handleClick}>
         <img src="../assets/shared/logo.svg" alt="" />
       </StyledNavLink>
       <ShadedDiv $open={open}></ShadedDiv>
       {children}
-    </Nav>
+    </StyledNav>
   );
 };
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const Heading = styled.h1`
+export const StyledH1 = styled.h1`
   color: var(--text);
   font-size: 1rem;
   text-transform: uppercase;
@@ -14,7 +14,7 @@ export const Heading = styled.h1`
   }
 `;
 
-export const Span = styled.span`
+export const StyledSpan = styled.span`
   text-transform: uppercase;
   font-family: var(--font-serif), serif;
   letter-spacing: 5px;
@@ -26,7 +26,7 @@ export const Span = styled.span`
   }
 `;
 
-export const Container = styled.div`
+export const StyledContainerDiv = styled.div`
   grid-column: 1/2;
   grid-row: 2/3;
   grid-template-columns: 1fr;
@@ -102,7 +102,7 @@ export const StyledButtonContainer = styled.div`
 `;
 
 //button hover effect:
-export const StyledCircle = styled.div`
+export const StyledDiv = styled.div`
   height: 250px;
   width: 250px;
   border-radius: 50%;
@@ -110,7 +110,7 @@ export const StyledCircle = styled.div`
   grid-column: 1/2;
   transition: background-color 1s;
   background-color: ${(props) =>
-        props.$hover === true ? 'hsla(0, 100%, 99%, 0.1)' : 'transparent'};
+    props.$hover === true ? 'hsla(0, 100%, 99%, 0.1)' : 'transparent'};
   @media only screen and (min-width: 700px) {
     width: 400px;
     height: 400px;

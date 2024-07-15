@@ -1,9 +1,9 @@
-import { UnorderedList } from './technologyMenuStyles.js';
+import { StyledUnorderedList, StyledNav } from './technologyMenuStyles.js';
 
 export const Menu = ({ children }) => {
   return (
-    <nav className="technology">
-      <UnorderedList>{children}</UnorderedList>
-    </nav>
+    <StyledNav className="technology">
+      <StyledUnorderedList>{children}</StyledUnorderedList>
+    </StyledNav>
   );
 };

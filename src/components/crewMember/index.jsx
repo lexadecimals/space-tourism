@@ -1,10 +1,13 @@
 import data from '../../data.json';
-import { Description, Heading, HeadingSpan as Span } from '../../sharedStyles';
+import {
+  StyledPara,
+  StyledH1,
+  HeadingSpan as HeadingSpan,
+} from '../../sharedStyles';
 import {
   Container,
   MainContentContainer,
-  Image,
-  GridContainer,
+  StyledImage,
   GradientContainer,
   Gradient,
 } from './crewMemberStyles';
@@ -30,18 +33,20 @@ const CrewMember = ({ name, children }) => {
         <>
           <MainContentContainer>
             <div>
-              <Heading $fontsize={fontSizes.heading}>
-                <Span $fontsize={fontSizes.span}>{crewMember.role}</Span>
+              <StyledH1 $fontsize={fontSizes.heading}>
+                <HeadingSpan $fontsize={fontSizes.span}>
+                  {crewMember.role}
+                </HeadingSpan>
                 <br></br>
                 {name}
-              </Heading>
-              <Description>{crewMember.bio}</Description>
+              </StyledH1>
+              <StyledPara>{crewMember.bio}</StyledPara>
             </div>
             {children}
           </MainContentContainer>
           <GradientContainer>
             <Gradient></Gradient>
-            <Image src={`../../${crewMember.images.png}`} alt="" />
+            <StyledImage src={`../../${crewMember.images.png}`} alt="" />
           </GradientContainer>
         </>
       )}

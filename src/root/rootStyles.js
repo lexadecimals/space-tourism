@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-export const UnorderedList = styled.ul`
+export const StyledUnorderedList = styled.ul`
   align-self: start;
   display: ${(props) => (props.$open === true ? 'flex' : 'none')};
   flex-direction: column;

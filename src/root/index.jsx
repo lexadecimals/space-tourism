@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Layout from '../components/layout/index.jsx';
 import MainMenu from '../components/menus/mainMenu/index.jsx';
 import {
-  UnorderedList,
+  StyledUnorderedList,
   StyledNavLink,
   HamburgerIcon,
   CloseIcon,
@@ -34,7 +34,7 @@ export const Root = () => {
   return (
     <Layout className="root">
       <MainMenu open={menuIsOpen} handleClick={closeMenuOnMobile}>
-        <UnorderedList $open={menuIsOpen}>
+        <StyledUnorderedList $open={menuIsOpen}>
           <li>
             <StyledNavLink to="/" onClick={closeMenuOnMobile}>
               <StyledSpan $home>00</StyledSpan>Home
@@ -64,7 +64,7 @@ export const Root = () => {
               <StyledSpan>03</StyledSpan>Technology
             </StyledNavLink>
           </li>
-        </UnorderedList>
+        </StyledUnorderedList>
         {menuIsOpen ? (
           <CloseIcon
             src="../assets/shared/icon-close.svg"

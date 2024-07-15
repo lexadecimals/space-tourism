@@ -1,7 +1,7 @@
 
 import styled from 'styled-components'
 
-export const Heading = styled.h1`
+export const StyledH1 = styled.h1`
   text-transform: uppercase;
   font-family: 'Bellfair', serif;
   font-weight: 400;
@@ -58,7 +58,7 @@ export const FactsContainer = styled.div`
     }
 `;
 
-export const Fact = styled.p`
+export const StyledFactP = styled.p`
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 1.75px;
@@ -68,7 +68,7 @@ export const Fact = styled.p`
     margin-bottom: 1rem;
 `;
 
-export const Span = styled.span`
+export const StyledSpan = styled.span`
     font-family: var(--font-serif), serif;
     font-weight: 400;
     font-size: 1.75rem;
@@ -81,7 +81,7 @@ export const Span = styled.span`
 
 `
 
-export const Image = styled.img`
+export const StyledImage = styled.img`
     max-width: 150px;
     transition: max-width 1s;
     @media only screen and (min-width:700px) {

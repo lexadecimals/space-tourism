@@ -4,17 +4,17 @@ import Technology from '../../components/technology/index.jsx';
 import { Menu } from '../../components/menus/technologyMenu/index.jsx';
 import data from '../../data.json';
 
-import { Container, SubHeading, Span } from '../../sharedStyles.js';
+import { StyledDiv, StyledH2, StyledSpan } from '../../sharedStyles.js';
 import { StyledNavLink } from './technologiesStyles.js';
 
 const Technologies = () => {
   const { tech } = useParams();
   const technologies = data.technology;
   return (
-    <Container $technology className="you are here">
-      <SubHeading $technology>
-        <Span>03</Span>Space Launch 101
-      </SubHeading>
+    <StyledDiv $technology className="you are here">
+      <StyledH2 $technology>
+        <StyledSpan>03</StyledSpan>Space Launch 101
+      </StyledH2>
       <Technology tech={tech}>
         <Menu>
           {technologies &&
@@ -33,7 +33,7 @@ const Technologies = () => {
             })}
         </Menu>
       </Technology>
-    </Container>
+    </StyledDiv>
   );
 };
 

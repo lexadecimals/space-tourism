@@ -6,7 +6,7 @@ export const StyledNavLink = styled(NavLink)`
   grid-row: 1/2;
 `;
 
-export const Nav = styled.nav`
+export const StyledNav = styled.nav`
   width: 95%;
   margin-left: 5%;
   grid-column: 1/2;

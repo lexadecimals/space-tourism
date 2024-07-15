@@ -36,7 +36,7 @@ export const TextContainer = styled.div`
     gap: 0;
 }
 `
-export const Image = styled.img`
+export const StyledImage = styled.img`
   grid-column: 1/2;
   grid-row: 1/2;
   max-height: 400px;

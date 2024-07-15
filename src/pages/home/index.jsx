@@ -1,14 +1,14 @@
 import { useState } from 'react';
 
 import {
-  Container,
-  Heading,
-  Span,
+  StyledContainerDiv,
+  StyledH1,
+  StyledSpan,
   StyledLink,
-  StyledCircle,
+  StyledDiv,
   StyledButtonContainer,
 } from './homeStyles';
-import { Description } from '../../sharedStyles';
+import { StyledPara } from '../../sharedStyles';
 
 const Homepage = () => {
   const [hoverState, setHoverState] = useState(false);
@@ -23,21 +23,21 @@ const Homepage = () => {
     console.log('out');
   };
   return (
-    <Container className="home-container">
+    <StyledContainerDiv className="home-container">
       <div>
-        <Heading>
+        <StyledH1>
           So, you want to travel to <br></br>
-          <Span>space</Span>
-        </Heading>
-        <Description>
+          <StyledSpan>space</StyledSpan>
+        </StyledH1>
+        <StyledPara>
           Let’s face it; if you want to go to space, you might as well genuinely
           go to outer space and not hover kind of on the edge of it.Well sit
           back, and relax because we’ll give you a truly out of this world
           experience!
-        </Description>
+        </StyledPara>
       </div>
       <StyledButtonContainer>
-        <StyledCircle $hover={hoverState}></StyledCircle>
+        <StyledDiv $hover={hoverState}></StyledDiv>
         <StyledLink
           to="/destination/moon"
           onMouseOver={handleMouseOver}
@@ -46,7 +46,7 @@ const Homepage = () => {
           Explore
         </StyledLink>
       </StyledButtonContainer>
-    </Container>
+    </StyledContainerDiv>
   );
 };
 

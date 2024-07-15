@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Nav = styled.nav`
+export const StyledNav = styled.nav`
 margin-top: 3rem;
 @media only screen and (min-width: 1200px) {
     align-self: center;    
@@ -8,7 +8,7 @@ margin-top: 3rem;
   }
 `
 
-export const UnorderedList = styled.ul`
+export const StyledUnorderedList = styled.ul`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: space-between;

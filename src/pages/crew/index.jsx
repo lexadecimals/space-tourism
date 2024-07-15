@@ -2,7 +2,7 @@ import { NavLink, useParams } from 'react-router-dom';
 
 import CrewMember from '../../components/crewMember/index.jsx';
 import data from '../../data.json';
-import { SubHeading, Span, Container } from '../../sharedStyles.js';
+import { StyledH2, StyledSpan, StyledDiv } from '../../sharedStyles.js';
 import { StyledNavLink } from './crewStyles.js';
 import { Menu } from '../../components/menus/crewMenu/index.jsx';
 
@@ -11,10 +11,10 @@ const Crew = () => {
   const crewMembers = data.crew;
 
   return (
-    <Container>
-      <SubHeading>
-        <Span>02</Span>Meet Your Crew
-      </SubHeading>
+    <StyledDiv>
+      <StyledH2>
+        <StyledSpan>02</StyledSpan>Meet Your Crew
+      </StyledH2>
       <CrewMember name={name}>
         <Menu>
           {crewMembers &&
@@ -27,7 +27,7 @@ const Crew = () => {
             })}
         </Menu>
       </CrewMember>
-    </Container>
+    </StyledDiv>
   );
 };
 

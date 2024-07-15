@@ -1,14 +1,14 @@
 import data from '../../data.json';
 import {
-  Heading,
+  StyledH1,
   MainContentContainer,
   FactsContainer,
   Container,
-  Fact,
-  Span,
-  Image,
+  StyledFactP,
+  StyledSpan,
+  StyledImage,
 } from './locationStyles';
-import { Description } from '../../sharedStyles.js';
+import { StyledPara } from '../../sharedStyles.js';
 
 const Location = ({ name, children }) => {
   const body = data.destinations.filter((e) => {
@@ -19,21 +19,21 @@ const Location = ({ name, children }) => {
       {body && (
         <>
           <Container>
-            <Image src={`../../${body.images.png}`} alt="" />
+            <StyledImage src={`../../${body.images.png}`} alt="" />
             <MainContentContainer>
               {children}
-              <Heading>{name}</Heading>
-              <Description>{body.description}</Description>
+              <StyledH1>{name}</StyledH1>
+              <StyledPara>{body.description}</StyledPara>
               <hr />
               <FactsContainer>
-                <Fact>
+                <StyledFactP>
                   avg. distance:<br></br>
-                  <Span>{body.distance}</Span>
-                </Fact>
-                <Fact>
+                  <StyledSpan>{body.distance}</StyledSpan>
+                </StyledFactP>
+                <StyledFactP>
                   est. travel time: <br></br>
-                  <Span>{body.travel}</Span>
-                </Fact>
+                  <StyledSpan>{body.travel}</StyledSpan>
+                </StyledFactP>
               </FactsContainer>
             </MainContentContainer>
           </Container>

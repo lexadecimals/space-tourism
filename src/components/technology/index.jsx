@@ -1,6 +1,11 @@
 import data from '../../data.json';
-import { Description, Heading, HeadingSpan as Span } from '../../sharedStyles';
-import { Picture, Container, MainContentContainer } from './technologyStyles';
+import { StyledPara, StyledH1, HeadingSpan as Span } from '../../sharedStyles';
+import {
+  Picture,
+  Container,
+  MainContentContainer,
+  StyledDiv,
+} from './technologyStyles';
 
 const fontSizes = {
   heading: {
@@ -39,19 +44,19 @@ const Technology = ({ tech, children }) => {
           </Picture>
           <MainContentContainer>
             {children}
-            <div className="technology-heading">
-              <Heading $fontsize={fontSizes.heading}>
+            <StyledDiv>
+              <StyledH1 $fontsize={fontSizes.heading}>
                 <Span $fontsize={fontSizes.span} $technology className="here">
                   The Terminology...
                 </Span>
                 <br></br>
                 {tech}
-              </Heading>
-            </div>
-            <div className="technology-description">
-              <Description>{techType.description}</Description>
+              </StyledH1>
+            </StyledDiv>
+            <StyledDiv $description>
+              <StyledPara>{techType.description}</StyledPara>
               {/* </div> */}
-            </div>
+            </StyledDiv>
           </MainContentContainer>
         </>
       )}

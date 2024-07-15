@@ -4,17 +4,17 @@ import Location from '../../components/location/index.jsx';
 import { Menu } from '../../components/menus/destinationMenu';
 import data from '../../data.json';
 
-import { Container, SubHeading, Span } from '../../sharedStyles.js';
+import { StyledDiv, StyledH2, StyledSpan } from '../../sharedStyles.js';
 import { StyledNavLink } from './destinationStyles.js';
 
 const Destination = () => {
   const { name } = useParams();
   const destinations = data.destinations;
   return (
-    <Container className="here">
-      <SubHeading>
-        <Span>01</Span>Pick Your Destination
-      </SubHeading>
+    <StyledDiv className="here">
+      <StyledH2>
+        <StyledSpan>01</StyledSpan>Pick Your Destination
+      </StyledH2>
       <Location name={name}>
         <Menu>
           {destinations &&
@@ -31,7 +31,7 @@ const Destination = () => {
             })}
         </Menu>
       </Location>
-    </Container>
+    </StyledDiv>
   );
 };
 

@@ -1,9 +1,9 @@
-import { Nav, UnorderedList } from './crewMenuStyles.js';
+import { StyledNav, StyledUnorderedList } from './crewMenuStyles.js';
 
 export const Menu = ({ children }) => {
   return (
-    <Nav>
-      <UnorderedList>{children}</UnorderedList>
-    </Nav>
+    <StyledNav>
+      <StyledUnorderedList>{children}</StyledUnorderedList>
+    </StyledNav>
   );
 };
