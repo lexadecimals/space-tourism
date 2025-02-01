@@ -27,7 +27,6 @@ const Technology = ({ tech, children }) => {
   )[0];
   const fileName = techType.name.split(' ').join('-').toLowerCase();
 
-  console.log(techType);
   return (
     <Container>
       {techType && (

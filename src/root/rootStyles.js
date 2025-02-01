@@ -39,6 +39,7 @@ export const StyledNavLink = styled(NavLink)`
   &:visited {
     border-bottom: none;
   }
+  
   &:hover {
     color: white;
     border-bottom: 2px solid silver;
@@ -55,6 +56,7 @@ export const StyledNavLink = styled(NavLink)`
       padding-bottom: 37px;
     }
   }
+
 `;
 
 export const StyledSpan = styled.span`

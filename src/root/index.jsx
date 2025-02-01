@@ -26,7 +26,6 @@ export const Root = () => {
 
   const closeMenuOnMobile = () => {
     if (window.innerWidth <= 700) {
-      console.log('closing menu');
       setMenuIsOpen(false);
     }
   };

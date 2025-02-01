@@ -14,13 +14,11 @@ const Homepage = () => {
   const [hoverState, setHoverState] = useState(false);
 
   const handleMouseOver = () => {
-    console.log('in');
     setHoverState(true);
   };
 
   const handleMouseOut = () => {
     setHoverState(false);
-    console.log('out');
   };
   return (
     <StyledContainerDiv className="home-container">
