@@ -9,9 +9,14 @@ import {
   StyledImage,
 } from './locationStyles';
 import { StyledPara } from '../../sharedStyles.js';
+import { StyledNavLink } from '../../pages/destination/destinationStyles.js';
 
-const Location = ({ name, children }) => {
-  const body = data.destinations.filter((e) => {
+import { Menu } from '../../components/menus/destinationMenu';
+
+const DestinationContent = ({ name }) => {
+  const destinations = data.destinations;
+
+  const body = destinations.filter((e) => {
     return e.name.toLowerCase() === name;
   })[0];
   return (
@@ -21,7 +26,20 @@ const Location = ({ name, children }) => {
           <Container>
             <StyledImage src={`../../${body.images.png}`} alt="" />
             <MainContentContainer>
-              {children}
+              <Menu>
+                {destinations &&
+                  destinations.map((location) => {
+                    return (
+                      <li key={location.description}>
+                        <StyledNavLink
+                          to={`/destination/${location.name.toLowerCase()}`}
+                        >
+                          {location.name}
+                        </StyledNavLink>
+                      </li>
+                    );
+                  })}
+              </Menu>
               <StyledH1>{name}</StyledH1>
               <StyledPara>{body.description}</StyledPara>
               <hr />
@@ -43,4 +61,4 @@ const Location = ({ name, children }) => {
   );
 };
 
-export default Location;
+export default DestinationContent;

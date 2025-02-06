@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 
-import Location from '../../components/location/index.jsx';
+import DestinationContent from '../../components/location/index.jsx';
 import { Menu } from '../../components/menus/destinationMenu';
 import data from '../../data.json';
 
@@ -11,12 +11,12 @@ const Destination = () => {
   const { name } = useParams();
   const destinations = data.destinations;
   return (
-    <StyledDiv className="here">
+    <StyledDiv>
       <StyledH2>
         <StyledSpan>01</StyledSpan>Pick Your Destination
       </StyledH2>
-      <Location name={name}>
-        <Menu>
+      <DestinationContent name={name}>
+        {/* <Menu>
           {destinations &&
             destinations.map((location) => {
               return (
@@ -29,8 +29,8 @@ const Destination = () => {
                 </li>
               );
             })}
-        </Menu>
-      </Location>
+        </Menu> */}
+      </DestinationContent>
     </StyledDiv>
   );
 };
