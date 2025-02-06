@@ -10,6 +10,7 @@ import {
   HamburgerIcon,
   CloseIcon,
   StyledSpan,
+  StyledHR,
 } from './rootStyles.js';
 
 export const Root = () => {
@@ -33,6 +34,7 @@ export const Root = () => {
   return (
     <Layout className="root">
       <MainMenu open={menuIsOpen} handleClick={closeMenuOnMobile}>
+        <StyledHR></StyledHR>
         <StyledUnorderedList $open={menuIsOpen}>
           <li>
             <StyledNavLink to="/" onClick={closeMenuOnMobile}>

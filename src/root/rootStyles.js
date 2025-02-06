@@ -93,3 +93,13 @@ export const CloseIcon = styled.img`
     display: none;
   }
 `;
+
+export const StyledHR = styled.hr`
+  @media only screen and (min-width: 700px) {
+    border: 1px solid white;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-left: 100px;
+    opacity: 0.25
+  }
+`
