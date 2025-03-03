@@ -5,6 +5,7 @@ import {
   HeadingSpan as HeadingSpan,
 } from '../../sharedStyles';
 import {
+  StyledNavLink,
   Container,
   MainContentContainer,
   StyledImage,
@@ -24,7 +25,10 @@ const fontSizes = {
   },
 };
 
-const CrewMember = ({ name, children }) => {
+import { Menu } from '../../components/menus/crewMenu/index.jsx';
+const crewMembers = data.crew;
+
+const CrewMemberContent = ({ name }) => {
   const decodedName = decodeURI(name);
   const crewMember = data.crew.filter((e) => e.name === decodedName)[0];
   return (
@@ -32,6 +36,18 @@ const CrewMember = ({ name, children }) => {
       {crewMember && (
         <>
           <MainContentContainer>
+            <Menu>
+              {crewMembers &&
+                crewMembers.map((member) => {
+                  return (
+                    <li key={member.name}>
+                      <StyledNavLink
+                        to={`/crew/${member.name}`}
+                      ></StyledNavLink>
+                    </li>
+                  );
+                })}
+            </Menu>
             <div>
               <StyledH1 $fontsize={fontSizes.heading}>
                 <HeadingSpan $fontsize={fontSizes.span}>
@@ -42,7 +58,6 @@ const CrewMember = ({ name, children }) => {
               </StyledH1>
               <StyledPara>{crewMember.bio}</StyledPara>
             </div>
-            {children}
           </MainContentContainer>
           <GradientContainer>
             <Gradient></Gradient>
@@ -54,4 +69,4 @@ const CrewMember = ({ name, children }) => {
   );
 };
 
-export default CrewMember;
+export default CrewMemberContent;

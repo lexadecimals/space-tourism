@@ -1,6 +1,7 @@
 import data from '../../data.json';
 import { StyledPara, StyledH1, HeadingSpan as Span } from '../../sharedStyles';
 import {
+  StyledNavLink,
   Picture,
   Container,
   MainContentContainer,
@@ -19,8 +20,10 @@ const fontSizes = {
     large: '2rem',
   },
 };
+import { Menu } from '../../components/menus/technologyMenu/index.jsx';
+const technologies = data.technology;
 
-const Technology = ({ tech, children }) => {
+const TechnologyContent = ({ tech }) => {
   const decodedTech = decodeURI(tech).toLowerCase(0);
   const techType = data.technology.filter(
     (e) => e.name.toLowerCase() === decodedTech
@@ -42,7 +45,22 @@ const Technology = ({ tech, children }) => {
             />
           </Picture>
           <MainContentContainer>
-            {children}
+            <Menu>
+              {technologies &&
+                technologies.map((tech) => {
+                  return (
+                    <li key={tech.description}>
+                      <StyledNavLink to={`/technology/${tech.name}`}>
+                        {tech.name === 'Launch vehicle'
+                          ? '1'
+                          : tech.name === 'Spaceport'
+                          ? '2'
+                          : '3'}
+                      </StyledNavLink>
+                    </li>
+                  );
+                })}
+            </Menu>
             <StyledDiv>
               <StyledH1 $fontsize={fontSizes.heading}>
                 <Span $fontsize={fontSizes.span} $technology className="here">
@@ -63,4 +81,4 @@ const Technology = ({ tech, children }) => {
   );
 };
 
-export default Technology;
+export default TechnologyContent;

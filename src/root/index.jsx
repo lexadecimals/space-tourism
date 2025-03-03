@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import data from '../data.json';
 import { useState } from 'react';
 
@@ -31,6 +31,8 @@ export const Root = () => {
     }
   };
 
+  const { pathname } = useLocation();
+
   return (
     <Layout className="root">
       <MainMenu open={menuIsOpen} handleClick={closeMenuOnMobile}>
@@ -45,6 +47,7 @@ export const Root = () => {
             <StyledNavLink
               to={`/destination/${destination}`}
               onClick={closeMenuOnMobile}
+              className={pathname.includes('destination') ? 'active' : ''}
             >
               <StyledSpan>01</StyledSpan>Destination
             </StyledNavLink>
@@ -53,6 +56,7 @@ export const Root = () => {
             <StyledNavLink
               to={`/crew/${crewMember}`}
               onClick={closeMenuOnMobile}
+              className={pathname.includes('crew') ? 'active' : ''}
             >
               <StyledSpan>02</StyledSpan>Crew
             </StyledNavLink>
@@ -61,6 +65,7 @@ export const Root = () => {
             <StyledNavLink
               to={`/technology/${tech}`}
               onClick={closeMenuOnMobile}
+              className={pathname.includes('technology') ? 'active' : ''}
             >
               <StyledSpan>03</StyledSpan>Technology
             </StyledNavLink>
