@@ -36,24 +36,37 @@ export const StyledNavLink = styled(NavLink)`
   font-weight: 100;
   color: white;
   text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  
+  @media only screen and (min-width: 700px) {
+      display: inline;
+    }
+
   &:visited {
     border-bottom: none;
   }
   
   &:hover {
     color: white;
-    border-bottom: 2px solid silver;
-    padding-bottom: 10px;
+    border-right: 4px solid silver;
+
     @media only screen and (min-width: 700px) {
       padding-bottom: 37px;
+      border-right: none;
+      border-bottom: 2px solid silver;
     }
   }
   &.active {
     color: white;
-    border-bottom: 2px solid white;
-    padding-bottom: 10px;
+    border-right: 4px solid white;
+
     @media only screen and (min-width: 700px) {
       padding-bottom: 37px;
+      border-right: none;
+      border-bottom: 2px solid white;
     }
   }
 
@@ -93,3 +106,15 @@ export const CloseIcon = styled.img`
     display: none;
   }
 `;
+
+export const StyledHR = styled.hr`
+  display: none;  
+  @media only screen and (min-width: 700px) {
+    display: block;
+    border: 1px solid white;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-left: 100px;
+    opacity: 0.25
+  }
+`
