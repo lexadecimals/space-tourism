@@ -15,7 +15,6 @@ import { Menu } from '../../components/menus/destinationMenu';
 
 const DestinationContent = ({ name }) => {
   const destinations = data.destinations;
-
   const body = destinations.filter((e) => {
     return e.name.toLowerCase() === name;
   })[0];

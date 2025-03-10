@@ -26,11 +26,13 @@ const fontSizes = {
 };
 
 import { Menu } from '../../components/menus/crewMenu/index.jsx';
+import { NotFound } from '../notFound/index.jsx';
 const crewMembers = data.crew;
 
 const CrewMemberContent = ({ name }) => {
   const decodedName = decodeURI(name);
   const crewMember = data.crew.filter((e) => e.name === decodedName)[0];
+
   return (
     <Container>
       {crewMember && (

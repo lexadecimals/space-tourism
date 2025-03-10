@@ -11,10 +11,11 @@ import Destination from './pages/destination/index.jsx';
 import Crew from './pages/crew/index.jsx';
 import Technologies from './pages/technologies/index.jsx';
 import { Root } from './root/index.jsx';
+import { NotFound, ErrorPage } from './components/notFound/index.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Root />}>
+    <Route path="/" element={<Root />} errorElement={<ErrorPage />}>
       <Route index element={<Homepage />} />
       <Route path="destination/:name" element={<Destination />} />
       <Route path="crew/:name" element={<Crew />} />
