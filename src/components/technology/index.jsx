@@ -21,6 +21,26 @@ const fontSizes = {
   },
 };
 import { Menu } from '../../components/menus/technologyMenu/index.jsx';
+import launchVehiclePortrait from '../../assets/technology/image-launch-vehicle-portrait.jpg';
+import launchVehicleLandscape from '../../assets/technology/image-launch-vehicle-landscape.jpg';
+import spaceCapsulePortrait from '../../assets/technology/image-space-capsule-portrait.jpg';
+import spaceCapsuleLandscape from '../../assets/technology/image-space-capsule-landscape.jpg';
+import spaceportPortrait from '../../assets/technology/image-spaceport-portrait.jpg';
+import spaceportLandscape from '../../assets/technology/image-spaceport-landscape.jpg';
+
+const imgUrls = {
+  portrait: {
+    'launch vehicle': launchVehiclePortrait,
+    'space capsule': spaceCapsulePortrait,
+    spaceport: spaceportPortrait,
+  },
+  landscape: {
+    'launch vehicle': launchVehicleLandscape,
+    'space capsule': spaceCapsuleLandscape,
+    spaceport: spaceportLandscape,
+  },
+};
+
 const technologies = data.technology;
 
 const TechnologyContent = ({ tech }) => {
@@ -28,7 +48,7 @@ const TechnologyContent = ({ tech }) => {
   const techType = data.technology.filter(
     (e) => e.name.toLowerCase() === decodedTech
   )[0];
-  const fileName = techType.name.split(' ').join('-').toLowerCase();
+  const fileName = techType.name.toLowerCase();
 
   return (
     <Container>
@@ -37,12 +57,9 @@ const TechnologyContent = ({ tech }) => {
           <Picture>
             <source
               media="(min-width: 1200px)"
-              srcSet={`../../assets/technology/image-${fileName}-portrait.jpg`}
+              srcSet={imgUrls.portrait[fileName]}
             />
-            <img
-              src={`../../assets/technology/image-${fileName}-landscape.jpg`}
-              alt=""
-            />
+            <img srcSet={imgUrls.landscape[fileName]} alt="" />
           </Picture>
           <MainContentContainer>
             <Menu>

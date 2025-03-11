@@ -13,6 +13,9 @@ import {
   StyledHR,
 } from './rootStyles.js';
 
+import closeIcon from '../assets/shared/icon-close.svg';
+import hamburgerIcon from '../assets/shared/icon-hamburger.svg';
+
 export const Root = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const crewMember = encodeURI(data.crew[0].name);
@@ -72,13 +75,10 @@ export const Root = () => {
           </li>
         </StyledUnorderedList>
         {menuIsOpen ? (
-          <CloseIcon
-            src="../assets/shared/icon-close.svg"
-            onClick={toggleMenu}
-          ></CloseIcon>
+          <CloseIcon src={closeIcon} onClick={toggleMenu}></CloseIcon>
         ) : (
           <HamburgerIcon
-            src="../assets/shared/icon-hamburger.svg"
+            src={hamburgerIcon}
             onClick={toggleMenu}
           ></HamburgerIcon>
         )}

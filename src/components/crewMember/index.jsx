@@ -26,11 +26,23 @@ const fontSizes = {
 };
 
 import { Menu } from '../../components/menus/crewMenu/index.jsx';
+import douglasHurley from '../../assets/crew/image-douglas-hurley.png';
+import markshuttleworth from '../../assets/crew/image-mark-shuttleworth.png';
+import victorGlover from '../../assets/crew/image-victor-glover.png';
+import anoushehAnsari from '../../assets/crew/image-anousheh-ansari.png';
+
 const crewMembers = data.crew;
+const imgUrls = {
+  'douglas hurley': douglasHurley,
+  'mark shuttleworth': markshuttleworth,
+  'victor glover': victorGlover,
+  'anousheh ansari': anoushehAnsari,
+};
 
 const CrewMemberContent = ({ name }) => {
   const decodedName = decodeURI(name);
-  const crewMember = data.crew.filter((e) => e.name === decodedName)[0];
+  const crewMember = crewMembers.filter((e) => e.name === decodedName)[0];
+
   return (
     <Container>
       {crewMember && (
@@ -61,7 +73,7 @@ const CrewMemberContent = ({ name }) => {
           </MainContentContainer>
           <GradientContainer>
             <Gradient></Gradient>
-            <StyledImage src={`../../${crewMember.images.png}`} alt="" />
+            <StyledImage src={imgUrls[crewMember.name.toLowerCase()]} alt="" />
           </GradientContainer>
         </>
       )}

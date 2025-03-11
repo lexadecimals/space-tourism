@@ -12,18 +12,28 @@ import {
 import { StyledPara } from '../../sharedStyles.js';
 
 import { Menu } from '../../components/menus/destinationMenu';
+import marsUrl from '../../assets/destination/image-mars.png';
+import moonUrl from '../../assets/destination/image-moon.png';
+import europaUrl from '../../assets/destination/image-europa.png';
+import titanUrl from '../../assets/destination/image-titan.png';
+
+const imgUrls = {
+  mars: marsUrl,
+  moon: moonUrl,
+  titan: titanUrl,
+  europa: europaUrl,
+};
+
+const destinations = data.destinations;
 
 const DestinationContent = ({ name }) => {
-  const destinations = data.destinations;
+  const body = destinations.filter((e) => e.name.toLowerCase() === name)[0];
 
-  const body = destinations.filter((e) => {
-    return e.name.toLowerCase() === name;
-  })[0];
   return (
     <>
       {body && (
         <Container>
-          <StyledImage src={`../../${body.images.png}`} alt="" />
+          <StyledImage src={imgUrls[name]} alt="" />
           <MainContentContainer>
             <Menu>
               {destinations &&
