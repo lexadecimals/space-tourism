@@ -58,8 +58,9 @@ const TechnologyContent = ({ tech }) => {
             <source
               media="(min-width: 1200px)"
               srcSet={imgUrls.portrait[fileName]}
+              alt={fileName}
             />
-            <img srcSet={imgUrls.landscape[fileName]} alt="" />
+            <img srcSet={imgUrls.landscape[fileName]} alt={fileName} />
           </Picture>
           <MainContentContainer>
             <Menu>
@@ -67,7 +68,10 @@ const TechnologyContent = ({ tech }) => {
                 technologies.map((tech) => {
                   return (
                     <li key={tech.description}>
-                      <StyledNavLink to={`/technology/${tech.name}`}>
+                      <StyledNavLink
+                        to={`/technology/${tech.name}`}
+                        aria-label={tech.name}
+                      >
                         {tech.name === 'Launch vehicle'
                           ? '1'
                           : tech.name === 'Spaceport'

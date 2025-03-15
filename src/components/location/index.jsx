@@ -33,7 +33,7 @@ const DestinationContent = ({ name }) => {
     <>
       {body && (
         <Container>
-          <StyledImage src={imgUrls[name]} alt="" />
+          <StyledImage src={imgUrls[name]} alt={name} />
           <MainContentContainer>
             <Menu>
               {destinations &&
@@ -42,6 +42,7 @@ const DestinationContent = ({ name }) => {
                     <li key={location.description}>
                       <StyledNavLink
                         to={`/destination/${location.name.toLowerCase()}`}
+                        aria-label={location.name}
                       >
                         {location.name}
                       </StyledNavLink>
