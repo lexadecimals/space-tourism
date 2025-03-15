@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import hamburgerIcon from '/assets/shared/icon-hamburger.svg';
+import closeIcon from '/assets/shared/icon-close.svg';
 
 export const StyledUnorderedList = styled.ul`
   align-self: start;
@@ -24,8 +26,10 @@ export const StyledUnorderedList = styled.ul`
     margin-left: 0;
   }
   @media only screen and (min-width: 1200px) {
-    margin-left: 20%;
+    margin-left: 10%;
     width: 80%;
+    justify-content: space-between;
+
   }
 `;
 export const StyledNavLink = styled(NavLink)`
@@ -40,9 +44,17 @@ export const StyledNavLink = styled(NavLink)`
   width: 100%;
   padding-top: 5px;
   padding-bottom: 5px;
+
+  transition: border-width 0.2s;
+  transition-timing-function: ease;
   
   @media only screen and (min-width: 700px) {
       display: inline;
+      //keep active parent link border styled
+      border-width: ${props => props.$active_route == "true" && "2px"};
+      border-bottom-style: ${props => props.$active_route == "true" && "solid"};
+      border-color: ${props => props.$active_route == "true" && "white"};
+      padding-bottom: 37px;
     }
 
   &:visited {
@@ -56,7 +68,9 @@ export const StyledNavLink = styled(NavLink)`
     @media only screen and (min-width: 700px) {
       padding-bottom: 37px;
       border-right: none;
-      border-bottom: 2px solid silver;
+      border-bottom-style: solid;
+      border-color: silver;
+      border-width: 2px;
     }
   }
   &.active {
@@ -76,45 +90,45 @@ export const StyledSpan = styled.span`
   margin-right: 1rem;
   font-weight: 700;
   @media only screen and (min-width: 700px) {
-    display: ${(props) => props.$home && 'none'};
+    display: none;
   }
-  @media only screen and (min-width: 1200px) {
-    display: initial;
+  @media only screen and (min-width: 900px) {
+    display: inline;
   }
 `;
 
-export const HamburgerIcon = styled.img`
+export const IconButton = styled.button`
   cursor: pointer;
+  background-image: ${(props) => props.$hamburger
+    ? `url("${hamburgerIcon}")`
+    : props.$close &&
+    `url("${closeIcon}")`};
+  background-repeat: no-repeat; 
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  width: 24px;
+  height: 24px;
   grid-column: 2/3;
   grid-row: 1/2;
   justify-self: end;
   z-index: 4;
-  margin-right: 10%;
+  padding: 10%;
   @media only screen and (min-width: 700px) {
     display: none;
   }
 `;
 
-export const CloseIcon = styled.img`
-  cursor: pointer;
-  grid-column: 2/3;
-  grid-row: 1/2;
-  justify-self: end;
-  z-index: 4;
-  margin-right: 10%;
-  @media only screen and (min-width: 700px) {
-    display: none;
-  }
-`;
 
 export const StyledHR = styled.hr`
   display: none;  
-  @media only screen and (min-width: 700px) {
+  @media only screen and (min-width: 1200px) {
+    position: absolute;
     display: block;
-    border: 1px solid white;
-    grid-column: 1/2;
-    grid-row: 1/2;
+    border: 0.5px solid white;
     margin-left: 100px;
-    opacity: 0.25
+    width: 35%;
+    opacity: 0.25;
+    z-index: 10;
   }
 `

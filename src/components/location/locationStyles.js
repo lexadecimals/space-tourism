@@ -10,6 +10,9 @@ export const StyledNavLink = styled(NavLink)`
   display: inline-block;
   font-size: 0.875rem;
   padding-bottom: 10px;
+
+  transition: border-width 0.2s;
+  transition-timing-function: ease;
   &:hover {
     border-bottom: 2px solid silver;
     padding-bottom: 10px;
@@ -111,7 +114,7 @@ export const StyledImage = styled.img`
     max-width: 300px;
   }
   @media only screen and (min-width: 1200px) {
-    max-width: 500px;
+    max-width: 480px;
     justify-self: start;
   }
 `;

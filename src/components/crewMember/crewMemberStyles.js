@@ -3,17 +3,30 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const StyledNavLink = styled(NavLink)`
+  position: relative;
   background: #979797;
   height: 10px;
   width: 10px;
   display: inline-block;
   border-radius: 50%;
+  transition: background-color 0.5s;
+
   &:hover {
     background: #c7c7c7;
   }
   &.active {
     background: white;
   }
+  &:after {
+  content: "";
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  left: 50%;
+  top: 50%;
+  transform:translate(-50%, -50%);
+  }
+  
   @media only screen and (min-width: 1200px) {
     width: 15px;
     height: 15px;
@@ -86,3 +99,9 @@ export const GradientContainer = styled.div`
     height: 500px;
   }
 `;
+
+export const FlexContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`

@@ -7,14 +7,10 @@ import MainMenu from '../components/menus/mainMenu/index.jsx';
 import {
   StyledUnorderedList,
   StyledNavLink,
-  HamburgerIcon,
-  CloseIcon,
   StyledSpan,
   StyledHR,
+  IconButton,
 } from './rootStyles.js';
-
-import closeIcon from '../assets/shared/icon-close.svg';
-import hamburgerIcon from '../assets/shared/icon-hamburger.svg';
 
 export const Root = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -35,10 +31,11 @@ export const Root = () => {
   };
 
   const { pathname } = useLocation();
+  const currentPath = pathname.toLowerCase();
 
   return (
     <Layout className="root">
-      <MainMenu open={menuIsOpen} handleClick={closeMenuOnMobile}>
+      <MainMenu isOpen={menuIsOpen} handleClick={closeMenuOnMobile}>
         <StyledHR></StyledHR>
         <StyledUnorderedList $open={menuIsOpen}>
           <li>
@@ -50,7 +47,9 @@ export const Root = () => {
             <StyledNavLink
               to={`/destination/${destination}`}
               onClick={closeMenuOnMobile}
-              className={pathname.includes('destination') ? 'active' : ''}
+              $active_route={
+                currentPath.includes('/destination') ? 'true' : 'false'
+              }
             >
               <StyledSpan>01</StyledSpan>Destination
             </StyledNavLink>
@@ -59,7 +58,7 @@ export const Root = () => {
             <StyledNavLink
               to={`/crew/${crewMember}`}
               onClick={closeMenuOnMobile}
-              className={pathname.includes('crew') ? 'active' : ''}
+              $active_route={currentPath.includes('/crew') ? 'true' : 'false'}
             >
               <StyledSpan>02</StyledSpan>Crew
             </StyledNavLink>
@@ -68,19 +67,26 @@ export const Root = () => {
             <StyledNavLink
               to={`/technology/${tech}`}
               onClick={closeMenuOnMobile}
-              className={pathname.includes('technology') ? 'active' : ''}
+              $active_route={
+                currentPath.includes('/technology') ? 'true' : 'false'
+              }
             >
               <StyledSpan>03</StyledSpan>Technology
             </StyledNavLink>
           </li>
         </StyledUnorderedList>
         {menuIsOpen ? (
-          <CloseIcon src={closeIcon} onClick={toggleMenu}></CloseIcon>
-        ) : (
-          <HamburgerIcon
-            src={hamburgerIcon}
+          <IconButton
+            $close
+            aria-label="close menu"
             onClick={toggleMenu}
-          ></HamburgerIcon>
+          ></IconButton>
+        ) : (
+          <IconButton
+            $hamburger
+            aria-label="open menu"
+            onClick={toggleMenu}
+          ></IconButton>
         )}
       </MainMenu>
       <Outlet />
