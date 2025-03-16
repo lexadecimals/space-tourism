@@ -1,17 +1,21 @@
 import styled from 'styled-components';
 
 export const StyledPara = styled.p`
-  line-height: 1.8;
+  line-height: 25px;
   color: var(--text);
+  font-size: 0.938rem;
   @media only screen and (min-width: 700px) {
     width: 70%;
     margin: 0 auto;
+    font-size: 1rem;
+    line-height: 28px;
   }
   @media only screen and (min-width: 1200px) {
     font-size: 1.125rem;
     margin: 0;
     width: 100%;
     padding-bottom: 1rem;
+    line-height: 32px;
   }
 `;
 
@@ -19,7 +23,7 @@ export const StyledH2 = styled.h2`
   font-size: 1rem;
   text-transform: uppercase;
   margin: 1rem 0 3rem;
-  letter-spacing: 3px;
+  letter-spacing: 2.7px;
   font-weight: 100;
   @media only screen and (min-width: 700px) {
     font-size: 1.25rem;

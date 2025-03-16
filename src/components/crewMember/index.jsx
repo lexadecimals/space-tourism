@@ -11,6 +11,7 @@ import {
   StyledImage,
   GradientContainer,
   Gradient,
+  FlexContainer,
 } from './crewMemberStyles';
 const fontSizes = {
   heading: {
@@ -48,19 +49,7 @@ const CrewMemberContent = ({ name }) => {
       {crewMember && (
         <>
           <MainContentContainer>
-            <Menu>
-              {crewMembers &&
-                crewMembers.map((member) => {
-                  return (
-                    <li key={member.name}>
-                      <StyledNavLink
-                        to={`/crew/${member.name}`}
-                      ></StyledNavLink>
-                    </li>
-                  );
-                })}
-            </Menu>
-            <div>
+            <FlexContainer>
               <StyledH1 $fontsize={fontSizes.heading}>
                 <HeadingSpan $fontsize={fontSizes.span}>
                   {crewMember.role}
@@ -69,11 +58,27 @@ const CrewMemberContent = ({ name }) => {
                 {name}
               </StyledH1>
               <StyledPara>{crewMember.bio}</StyledPara>
-            </div>
+            </FlexContainer>
+            <Menu>
+              {crewMembers &&
+                crewMembers.map((member) => {
+                  return (
+                    <li key={member.name}>
+                      <StyledNavLink
+                        to={`/crew/${member.name}`}
+                        aria-label={member.name}
+                      ></StyledNavLink>
+                    </li>
+                  );
+                })}
+            </Menu>
           </MainContentContainer>
           <GradientContainer>
             <Gradient></Gradient>
-            <StyledImage src={imgUrls[crewMember.name.toLowerCase()]} alt="" />
+            <StyledImage
+              src={imgUrls[crewMember.name.toLowerCase()]}
+              alt={crewMember.name}
+            />
           </GradientContainer>
         </>
       )}
