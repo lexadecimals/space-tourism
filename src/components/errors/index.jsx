@@ -1,6 +1,6 @@
 import { useRouteError } from 'react-router-dom';
 import { StyledLink, StyledDiv, StyledImage } from './errorsStyles.js';
-import planetUrl from '../../assets/shared/icon-planet.svg';
+import planetUrl from '/assets/shared/icon-planet.svg';
 
 export const NotFound = () => {
   return (

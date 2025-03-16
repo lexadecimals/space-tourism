@@ -26,6 +26,7 @@ export const StyledNav = styled.nav`
 `;
 export const ShadedDiv = styled.div`
   display: ${(props) => (props.$open === true ? 'block' : 'none')};
+  -webkit-backdrop-filter: blur(56px);
   backdrop-filter: blur(56px);
   height: 100%;
   width: 100%;
