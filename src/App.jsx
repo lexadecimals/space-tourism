@@ -11,7 +11,7 @@ import Destination from './pages/destination/index.jsx';
 import Crew from './pages/crew/index.jsx';
 import Technologies from './pages/technologies/index.jsx';
 import { Root } from './root/index.jsx';
-import { NotFound, ErrorPage } from './components/notFound/index.jsx';
+import { NotFound, ErrorPage } from './components/errors/index.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
