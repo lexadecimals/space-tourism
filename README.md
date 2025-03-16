@@ -24,7 +24,7 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - View each page and be able to toggle between the tabs to see new information
 
-- For most of this challenge I did not have access to Figma's developer mode. The design files provided by Frontend Mentor were modified slightly (mostly small layout changes) between when I started the project and when I completed it, so I was working with 2 different design files.
+For most of this challenge I did not have access to Figma's developer mode. The design files provided by Frontend Mentor were modified slightly (mostly small layout changes) between when I started the project and when I completed it, so I was working with 2 different design files.
 
 ### Screenshots
 
