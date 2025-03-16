@@ -26,6 +26,11 @@ Users should be able to:
 
 For most of this challenge I did not have access to Figma's developer mode. The design files provided by Frontend Mentor were modified slightly (mostly small layout changes) between when I started the project and when I completed it, so I was working with 2 different design files.
 
+### Links
+
+- [Solution URL](https://github.com/lexadecimals/space-tourism)
+- [Live Site URL](https://lucky-mermaid-43f201.netlify.app/)
+
 ### Screenshots
 
 #### Desktop
@@ -41,12 +46,6 @@ For most of this challenge I did not have access to Figma's developer mode. The 
 
 <img src = "mobile-launch.png" alt = "desktop home page" style="width:30%; height:auto;" /> <img src = "mobile-menu.png" alt = "desktop crew page" style="width:30%; height:auto;" />
 
-
-
-### Links
-
-- [Solution URL](https://github.com/lexadecimals/space-tourism)
-- [Live Site URL](https://lucky-mermaid-43f201.netlify.app/)
 
 ## My process
 
