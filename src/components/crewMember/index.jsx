@@ -11,6 +11,7 @@ import {
   StyledImage,
   GradientContainer,
   Gradient,
+  FlexContainer,
 } from './crewMemberStyles';
 const fontSizes = {
   heading: {
@@ -26,31 +27,29 @@ const fontSizes = {
 };
 
 import { Menu } from '../../components/menus/crewMenu/index.jsx';
-import { NotFound } from '../notFound/index.jsx';
+import { NotFound } from '../errors/index.jsx';
+import douglasHurley from '../../assets/crew/image-douglas-hurley.png';
+import markshuttleworth from '../../assets/crew/image-mark-shuttleworth.png';
+import victorGlover from '../../assets/crew/image-victor-glover.png';
+import anoushehAnsari from '../../assets/crew/image-anousheh-ansari.png';
+
 const crewMembers = data.crew;
+const imgUrls = {
+  'douglas hurley': douglasHurley,
+  'mark shuttleworth': markshuttleworth,
+  'victor glover': victorGlover,
+  'anousheh ansari': anoushehAnsari,
+};
 
 const CrewMemberContent = ({ name }) => {
   const decodedName = decodeURI(name);
-  const crewMember = data.crew.filter((e) => e.name === decodedName)[0];
-
+  const crewMember = crewMembers.filter((e) => e.name === decodedName)[0];
   return (
     <Container>
-      {crewMember && (
+      {crewMember ? (
         <>
           <MainContentContainer>
-            <Menu>
-              {crewMembers &&
-                crewMembers.map((member) => {
-                  return (
-                    <li key={member.name}>
-                      <StyledNavLink
-                        to={`/crew/${member.name}`}
-                      ></StyledNavLink>
-                    </li>
-                  );
-                })}
-            </Menu>
-            <div>
+            <FlexContainer>
               <StyledH1 $fontsize={fontSizes.heading}>
                 <HeadingSpan $fontsize={fontSizes.span}>
                   {crewMember.role}
@@ -59,13 +58,31 @@ const CrewMemberContent = ({ name }) => {
                 {name}
               </StyledH1>
               <StyledPara>{crewMember.bio}</StyledPara>
-            </div>
+            </FlexContainer>
+            <Menu>
+              {crewMembers &&
+                crewMembers.map((member) => {
+                  return (
+                    <li key={member.name}>
+                      <StyledNavLink
+                        to={`/crew/${member.name}`}
+                        aria-label={member.name}
+                      ></StyledNavLink>
+                    </li>
+                  );
+                })}
+            </Menu>
           </MainContentContainer>
           <GradientContainer>
             <Gradient></Gradient>
-            <StyledImage src={`../../${crewMember.images.png}`} alt="" />
+            <StyledImage
+              src={imgUrls[crewMember.name.toLowerCase()]}
+              alt={crewMember.name}
+            />
           </GradientContainer>
         </>
+      ) : (
+        <NotFound />
       )}
     </Container>
   );

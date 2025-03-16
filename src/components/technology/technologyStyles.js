@@ -16,6 +16,9 @@ export const StyledNavLink = styled(NavLink)`
   text-align: center;
   line-height: 40px;
 
+  transition: border-color 0.2s ease,
+              background-color 0.2s ease;
+
   &:hover {
     border: 1px solid white;
   }

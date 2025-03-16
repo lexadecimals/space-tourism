@@ -12,17 +12,29 @@ import {
 import { StyledPara } from '../../sharedStyles.js';
 
 import { Menu } from '../../components/menus/destinationMenu';
+import marsUrl from '../../assets/destination/image-mars.png';
+import moonUrl from '../../assets/destination/image-moon.png';
+import europaUrl from '../../assets/destination/image-europa.png';
+import titanUrl from '../../assets/destination/image-titan.png';
+import { NotFound } from '../errors/index.jsx';
+
+const imgUrls = {
+  mars: marsUrl,
+  moon: moonUrl,
+  titan: titanUrl,
+  europa: europaUrl,
+};
+
+const destinations = data.destinations;
 
 const DestinationContent = ({ name }) => {
-  const destinations = data.destinations;
-  const body = destinations.filter((e) => {
-    return e.name.toLowerCase() === name;
-  })[0];
+  const body = destinations.filter((e) => e.name.toLowerCase() === name)[0];
+
   return (
     <>
-      {body && (
+      {body ? (
         <Container>
-          <StyledImage src={`../../${body.images.png}`} alt="" />
+          <StyledImage src={imgUrls[name]} alt={name} />
           <MainContentContainer>
             <Menu>
               {destinations &&
@@ -31,6 +43,7 @@ const DestinationContent = ({ name }) => {
                     <li key={location.description}>
                       <StyledNavLink
                         to={`/destination/${location.name.toLowerCase()}`}
+                        aria-label={location.name}
                       >
                         {location.name}
                       </StyledNavLink>
@@ -53,6 +66,8 @@ const DestinationContent = ({ name }) => {
             </FactsContainer>
           </MainContentContainer>
         </Container>
+      ) : (
+        <NotFound />
       )}
     </>
   );
