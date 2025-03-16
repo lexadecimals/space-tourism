@@ -31,7 +31,7 @@ For most of this challenge I did not have access to Figma's developer mode. The 
 - [Solution URL](https://github.com/lexadecimals/space-tourism)
 - [Live Site URL](https://lucky-mermaid-43f201.netlify.app/)
 
-### Screenshots
+### Screenshots from completed project
 
 #### Desktop
 
