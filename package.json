@@ -20,7 +20,6 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-error-boundary": "^5.0.0",
     "react-router-dom": "^6.23.1",
     "styled-components": "^6.1.11"
   }
